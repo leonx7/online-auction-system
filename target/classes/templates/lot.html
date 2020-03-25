@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lot</title>
+    <script th:replace="fragments/header :: headerElement"></script>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card w-150" style="margin: 1.5em auto">
+        <div class="card-header" style="text-align: center" th:text="${title}"></div>
+        <div class="card-body">
+            <div class="row">
+                    <div class="column" th:each="photo : ${photos}">
+                        <img class="img-fluid" alt="sample" th:src="*{'data:image/png;base64,'+photo}" style="width:100%">
+                    </div>
+            </div>
+            <p class="card-text" id="description"  th:text="${description}"></p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+</body>
+</html>
