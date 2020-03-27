@@ -1,7 +1,6 @@
 package by.itstep.onlineauctionsystem.controller;
 
 import by.itstep.onlineauctionsystem.exeption.UsernameExistsException;
-import by.itstep.onlineauctionsystem.model.User;
 import by.itstep.onlineauctionsystem.model.UserDto;
 import by.itstep.onlineauctionsystem.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +24,6 @@ public class UserController {
 
     @PostMapping("/registration")
     public String registration(@ModelAttribute("userDto") UserDto userDto, BindingResult bindingResult) throws UsernameExistsException {
-        User user = new User();
         if (bindingResult.hasErrors()) {
             return "registration";
         }
