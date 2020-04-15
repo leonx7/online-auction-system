@@ -1,6 +1,6 @@
 package by.itstep.onlineauctionsystem.security;
 
-import by.itstep.onlineauctionsystem.model.User;
+import by.itstep.onlineauctionsystem.model.user.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class MyUserPrincipal implements UserDetails {
+
     private User user;
 
     public MyUserPrincipal(User user) {

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome page</title>
+    <script th:replace="fragments/header :: headerElement"></script>
+</head>
+<body>
+<script th:replace="fragments/header :: header"></script>
+<script th:replace="fragments/header :: timerElement"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-3" th:each="itemDto, iterStat : ${itemsDto}" th:with="id='Timer-' + ${iterStat.index}" style="margin-top: 1.5em">
+            <div class="card h-100 text-center">
+                <img class="card-img-top" th:src="*{'data:image/png;base64,'+itemDto.encodedImages.get(0)}"
+                     th:alt="${itemDto.title}" style="height: 270px">
+                <div class="card-body">
+                    <a th:href="@{/item/{itemId}(itemId=${itemDto.id})}"><h5 class="card-title"
+                                                                         th:text="${itemDto.title}"></h5></a>
+                    <p class="card-text" th:text="'Starting price: ' + ${itemDto.price} + ' BYR'"></p>
+                    <p class="card-text" th:text="'End date: ' + ${itemDto.formattedEndTime}"></p>
+                        <span th:id="${id}"  name="timer" class="card-text"></span>
+                        <script th:inline="javascript">
+                            var endTime = [[${itemDto.endTime}]];
+                            var id = [[${id}]]
+                            console.log(endTime);
+                            console.log(id);
+                            initializeTimer(endTime, id);
+                        </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

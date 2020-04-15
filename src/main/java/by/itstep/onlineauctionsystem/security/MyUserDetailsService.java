@@ -1,6 +1,6 @@
 package by.itstep.onlineauctionsystem.security;
 
-import by.itstep.onlineauctionsystem.model.User;
+import by.itstep.onlineauctionsystem.model.user.User;
 import by.itstep.onlineauctionsystem.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

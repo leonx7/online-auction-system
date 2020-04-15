@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <title>Item</title>
+    <script th:replace="fragments/header :: headerElement"></script>
+    <script th:replace="fragments/header :: timerElement"></script>
+    <script type='application/javascript' src="/webjars/jquery/jquery.min.js" ></script>
+    <script type='application/javascript' src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script type='application/javascript' src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script>
+        var token = $("meta[name='_csrf']").attr("content");
+        var header = $("meta[name='_csrf_header']").attr("content");
+        console.log(token);
+        console.log(header);
+
+        $(document).ajaxSend(function (e, xhr, options) {
+            xhr.setRequestHeader(header, token);
+        });
+    </script>
+    <script sec:authorize="isAuthenticated()">
+        var stompClient = null;
+
+        function connect() {
+            var socket = new SockJS('/gs-guide-websocket');
+            stompClient = Stomp.over(socket);
+            stompClient.connect({}, function (frame) {
+                console.log('Connected: ' + frame);
+                stompClient.subscribe('/topic/bidResponse', function (bidResponse) {
+                    showBidResponse(JSON.parse(bidResponse.body).content);
+                });
+            });
+        }
+
+        function sendBidRequest() {
+            console.log($("#bid").val());
+            console.log($("#increment").val());
+            stompClient.send("/app/bidRequest", {}, JSON.stringify({
+                'id': $("#id").val(),
+                'bid': $("#bid").val(),
+                'increment': $("#increment").val(),
+            }));
+        }
+
+        function showBidResponse(bidResponse) {
+            $("#bid").val(bidResponse);
+        }
+
+        $(function () {
+            $("#bidBtn").on('submit', function (e) {
+                e.preventDefault();
+            });
+            $( "#bidBtn" ).click(function() { sendBidRequest(); });
+        });
+    </script>
+</head>
+<body onload="connect()">
+<header>
+    <script th:replace="fragments/header :: header"></script>
+    <script th:inline="javascript">
+        let endTime = [[${itemDto.endTime}]];
+        let id = 'timer';
+        initializeTimer(endTime, id);
+    </script>
+    <script sec:authorize="!isAuthenticated()">
+        $(document).ready(function() {
+            $("#bidBtn").prop('readonly', true);
+            $("#bidBtn").prop('type', 'button');
+            $("#bidBtn").attr('data-toggle', 'modal');
+            $("#bidBtn").attr('data-target', '#exampleModal');
+        });
+    </script>
+</header>
+<div class="container">
+    <div class="card w-150" style="margin: 1.5em auto">
+        <div class="card-header" style="text-align: center" th:text="${itemDto.title}"></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="img-fluid" alt="sample" th:each="image : ${itemDto.encodedImages}"
+                         th:src="*{'data:image/png;base64,'+image}" style="width:200px; height: 200px">
+                </div>
+                <div class="col-sm-6">
+                    <input type="hidden" id="id" th:value="${itemDto.id}"/>
+                    <input type="hidden" id="increment" th:value="${itemDto.increment}"/>
+                    <h5 class="card-title" th:text="'End date: ' + ${itemDto.formattedEndTime}"></h5>
+                    <h5 class="card-title" th:text="'Current price: ' + ${itemDto.price} + ' BYR'"></h5>
+                    <span id="timer" class="card-text"></span>
+                    <div class="col-sm-8" style="margin-top: 1.5em">
+                        <span class="card-text">Bid directly</span>
+                        <div class="input-group" style="margin-bottom: 1.5em">
+                            <input type="text" id="bid" class="form-control"
+                                   th:placeholder="'BYR ' + (${itemDto.price} + ${itemDto.increment})"
+                                   th:value="(${itemDto.price} + ${itemDto.increment})" onfocus="this.value=''"/>
+                            <div class="input-group-append" id="button-addon4">
+                                <button class="btn btn-outline-secondary" type="submit" id="bidBtn">Place this bid
+                                </button>
+                            </div>
+                        </div>
+                        <span class="card-text">Place automatic bid</span>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="BYR"/>
+                            <div class="input-group-append" id="button-addon5">
+                                <button class="btn btn-outline-secondary" type="submit" style="width: 120px">Auto
+                                    bid
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,16 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1576bd89-f8ab-4e94-ab2f-7b714e5aab0d" name="Default Changelist" comment="feat: add login and registration for user">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_0.xml" beforeDir="false" />
+    <list default="true" id="1576bd89-f8ab-4e94-ab2f-7b714e5aab0d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_3_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_2_1_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_5_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity5_3_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_bootstrap_3_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_3_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_sockjs_client_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_stomp_websocket_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_webjars_locator_core_0_35.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/BiddingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/Bid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/BidRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/BidResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/category/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/category/CategoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/AuctionData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/ItemData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/ItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/AuctionDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/BidRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ImageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ItemDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/RefererRedirectionAuthenticationSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/BiddingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/ImageStorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/ItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/websocket/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/item.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/by/itstep/onlineauctionsystem/mapper/ItemMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/online-auction-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/online-auction-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/LotController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/exeption/FileStorageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/exeption/FileStorageException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/Lot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/Photo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/user/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/user/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/LotRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/PhotoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/LotService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/PhotoStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -26,6 +133,17 @@
         <option value="https://github.com/rakovets-lab/online-auction-system.git" />
       </set>
     </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="$USER_HOME$/AppData/Roaming/npm/node_modules/bower" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -46,20 +164,69 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/online-auction-system" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\static\js" />
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\public" />
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\templates" />
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\public\js" />
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\static\js\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\public" />
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="MapperTest.testLotMapperEntityToDto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="online-auction-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.MapperTest" />
+      <option name="METHOD_NAME" value="testLotMapperEntityToDto" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapperTest.testLotMapperToDtoToEntity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="online-auction-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.MapperTest" />
+      <option name="METHOD_NAME" value="testLotMapperToDtoToEntity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -123,6 +290,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.MapperTest.testLotMapperEntityToDto" />
+        <item itemvalue="JUnit.MapperTest.testLotMapperToDtoToEntity" />
       </list>
     </recent_temporary>
   </component>
@@ -140,6 +309,40 @@
       <workItem from="1585207348453" duration="7168000" />
       <workItem from="1585256851952" duration="711000" />
       <workItem from="1585310796254" duration="1021000" />
+      <workItem from="1585312097414" duration="16527000" />
+      <workItem from="1585373611352" duration="5497000" />
+      <workItem from="1585404273485" duration="14049000" />
+      <workItem from="1585475330293" duration="27499000" />
+      <workItem from="1585553294976" duration="20012000" />
+      <workItem from="1585589879001" duration="5902000" />
+      <workItem from="1585638331008" duration="934000" />
+      <workItem from="1585650515486" duration="2760000" />
+      <workItem from="1585675768164" duration="357000" />
+      <workItem from="1585676145070" duration="699000" />
+      <workItem from="1585677020516" duration="1491000" />
+      <workItem from="1585678663266" duration="9424000" />
+      <workItem from="1585722779496" duration="10210000" />
+      <workItem from="1585813966264" duration="21644000" />
+      <workItem from="1586161743254" duration="2492000" />
+      <workItem from="1586271160267" duration="13371000" />
+      <workItem from="1586337617314" duration="11507000" />
+      <workItem from="1586350097742" duration="1562000" />
+      <workItem from="1586351676463" duration="296000" />
+      <workItem from="1586351992728" duration="25337000" />
+      <workItem from="1586419801794" duration="13205000" />
+      <workItem from="1586447485077" duration="248000" />
+      <workItem from="1586447749113" duration="309000" />
+      <workItem from="1586448163441" duration="2339000" />
+      <workItem from="1586451679985" duration="314000" />
+      <workItem from="1586452124689" duration="1242000" />
+      <workItem from="1586533585891" duration="22926000" />
+      <workItem from="1586586663419" duration="5397000" />
+      <workItem from="1586601560772" duration="6677000" />
+      <workItem from="1586617319652" duration="7958000" />
+      <workItem from="1586691365689" duration="13487000" />
+      <workItem from="1586768631195" duration="12651000" />
+      <workItem from="1586847711216" duration="17616000" />
+      <workItem from="1586952622151" duration="707000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add login and registration for user">
       <created>1584394262733</created>
@@ -148,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584394262733</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add a new lot, display a lot">
+      <created>1585312186572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585312186572</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,17 +370,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -213,9 +412,34 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: add login and registration for user" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add login and registration for user" />
+    <MESSAGE value="feat: add a new lot, display a lot" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add a new lot, display a lot" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Assign_Data_Sources" timestamp="1585817413750">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1585817413750" />
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1586276115078">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586276115078" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585679912012">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585679912012" />
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1585829732933">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1585829732933" />
+    <state x="542" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586552818309">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="542" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586552818309" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1586770551015">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586770551015" />
     <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584394066043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -224,54 +448,102 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="67" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1536.824@0.0.1536.824" timestamp="1584394064827" />
-    <state x="307" y="7" key="CommitChangelistDialog2" timestamp="1585252696006">
+    <state x="313" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586536166712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="307" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585252696006" />
-    <state width="1493" height="150" key="GridCell.Tab.0.bottom" timestamp="1584395493780">
+    <state x="313" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1586536166712" />
+    <state x="566" y="272" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585829993462">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584395493780" />
-    <state width="1493" height="150" key="GridCell.Tab.0.center" timestamp="1584395493779">
+    <state x="566" y="272" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1585829993462" />
+    <state x="566" y="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1586536173104">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584395493779" />
-    <state width="1493" height="150" key="GridCell.Tab.0.left" timestamp="1584395493779">
+    <state x="566" y="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1586536173104" />
+    <state x="500" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586372316372">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584395493779" />
-    <state width="1493" height="150" key="GridCell.Tab.0.right" timestamp="1584395493779">
+    <state x="500" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1586372316372" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586849799002">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584395493779" />
-    <state width="1493" height="150" key="GridCell.Tab.1.bottom" timestamp="1584395493780">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586849799002" />
+    <state x="307" y="7" key="CommitChangelistDialog2" timestamp="1585312185531">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584395493780" />
-    <state width="1493" height="150" key="GridCell.Tab.1.center" timestamp="1584395493780">
+    <state x="307" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585312185531" />
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1586351044504">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584395493780" />
-    <state width="1493" height="150" key="GridCell.Tab.1.left" timestamp="1584395493780">
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586351044504" />
+    <state width="1493" height="145" key="GridCell.Tab.0.bottom" timestamp="1586900168699">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584395493780" />
-    <state width="1493" height="150" key="GridCell.Tab.1.right" timestamp="1584395493780">
+    <state width="1493" height="145" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
+    <state width="1493" height="145" key="GridCell.Tab.0.center" timestamp="1586900168699">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="150" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584395493780" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1584394195647">
+    <state width="1493" height="145" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
+    <state width="1493" height="145" key="GridCell.Tab.0.left" timestamp="1586900168699">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584394195647" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1585256950591">
+    <state width="1493" height="145" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
+    <state width="1493" height="145" key="GridCell.Tab.0.right" timestamp="1586900168699">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585256950591" />
+    <state width="1493" height="145" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
+    <state width="1493" height="145" key="GridCell.Tab.1.bottom" timestamp="1586900168699">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="145" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
+    <state width="1493" height="145" key="GridCell.Tab.1.center" timestamp="1586900168699">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="145" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
+    <state width="1493" height="145" key="GridCell.Tab.1.left" timestamp="1586900168699">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="145" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
+    <state width="1493" height="145" key="GridCell.Tab.1.right" timestamp="1586900168699">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="145" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
+    <state width="1493" height="368" key="GridCell.Tab.2.bottom" timestamp="1586558601919">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="368" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586558601919" />
+    <state width="1493" height="368" key="GridCell.Tab.2.center" timestamp="1586558601919">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="368" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1586558601919" />
+    <state width="1493" height="368" key="GridCell.Tab.2.left" timestamp="1586558601919">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="368" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1586558601919" />
+    <state width="1493" height="368" key="GridCell.Tab.2.right" timestamp="1586558601919">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="368" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1586558601919" />
+    <state x="439" y="111" key="NewModule_or_Project.wizard" timestamp="1586168803771">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="439" y="111" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1586168803771" />
+    <state x="277" y="0" width="981" height="802" key="SettingsEditor" timestamp="1586550429624">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" width="981" height="802" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586550429624" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1585312230180">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585312230180" />
     <state x="454" y="146" key="VcsDiffUtil.ChangesDialog" timestamp="1585253404484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="454" y="146" key="VcsDiffUtil.ChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585253404484" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1586274897285">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1586274897285" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1585253111826">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -288,5 +560,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="559" y="277" key="git4idea.rebase.GitRebaseDialog/0.0.1536.824@0.0.1536.824" timestamp="1585254997694" />
+    <state x="485" y="220" key="jetbrains.nodejs.interpreters-dialog" timestamp="1585680035082">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="220" key="jetbrains.nodejs.interpreters-dialog/0.0.1536.824@0.0.1536.824" timestamp="1585680035082" />
+    <state x="209" y="33" key="new project wizard" timestamp="1586693168705">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586693168705" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1586895521883">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1586895521883" />
   </component>
 </project>

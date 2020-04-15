@@ -1,7 +1,7 @@
 package by.itstep.onlineauctionsystem.controller;
 
 import by.itstep.onlineauctionsystem.exeption.UsernameExistsException;
-import by.itstep.onlineauctionsystem.model.UserDto;
+import by.itstep.onlineauctionsystem.model.user.UserDto;
 import by.itstep.onlineauctionsystem.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class UserController {
+
     @Autowired
     private UserService userService;
 
@@ -23,7 +24,7 @@ public class UserController {
     }
 
     @PostMapping("/registration")
-    public String registration(@ModelAttribute("userDto") UserDto userDto, BindingResult bindingResult) throws UsernameExistsException {
+    public String registration(@ModelAttribute("userDto") UserDto userDto, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "registration";
         }
@@ -40,8 +41,4 @@ public class UserController {
         return "login";
     }
 
-    @GetMapping({"/", "/welcome"})
-    public String welcome(Model model) {
-        return "welcome";
-    }
 }
