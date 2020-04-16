@@ -60,7 +60,14 @@
             </ul>
             <div class="navbar-nav ml-auto">
                 <div sec:authorize="!isAuthenticated()">
-                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal" id="loginBtn">Log in</button>
+                    <button type="button" class="btn btn-primary btn-lg"  id="loginBtn">Log in</button>
+                    <script type="text/javascript">
+                        $(function () {
+                            $("#loginBtn").click(function () {
+                                window.location.href = "/login"
+                            })
+                        });
+                    </script>
                 </div>
                 <div sec:authorize="isAuthenticated()">
                     <form action="/logout" method="post" class="float-right">
@@ -91,9 +98,12 @@
                             <label for="password" class="col-form-label">Password:</label>
                             <input type="password" class="form-control" id="password" name="password"/>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary" id="submitBtn">Log in</button>
+                        <div class="modal-footer" align="left">
+                            <button type="submit" class="btn btn-primary" id="submitBtn" >Log in</button>
+                        </div>
+                        <div style="margin-top: 1.5em">
+                            <label>New to Online Auction System?</label>
+                            <a href="/registration" style="color: dodgerblue">Join us</a>
                         </div>
                     </form>
                 </div>

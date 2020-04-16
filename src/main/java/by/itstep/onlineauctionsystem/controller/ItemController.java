@@ -1,12 +1,13 @@
 package by.itstep.onlineauctionsystem.controller;
 
+import by.itstep.onlineauctionsystem.model.category.Category;
+import by.itstep.onlineauctionsystem.model.category.CategoryDto;
 import by.itstep.onlineauctionsystem.model.item.Item;
 import by.itstep.onlineauctionsystem.model.item.ItemDto;
-import by.itstep.onlineauctionsystem.model.user.User;
+import by.itstep.onlineauctionsystem.service.CategoryService;
 import by.itstep.onlineauctionsystem.service.ItemService;
 import by.itstep.onlineauctionsystem.service.ImageStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -21,11 +22,15 @@ public class ItemController {
     ItemService itemService;
     @Autowired
     ImageStorageService imageStorageService;
+    @Autowired
+    CategoryService categoryService;
 
     @GetMapping("/")
     public String getIndex(Model model) {
-        List<ItemDto> itemsDto = itemService.getAllItems();
-        model.addAttribute("itemsDto", itemsDto);
+        List<ItemDto> items = itemService.getAllItems();
+        List<CategoryDto> categories = categoryService.getCategories();
+        model.addAttribute("items", items);
+        model.addAttribute("categories", categories);
         return "index";
     }
 
@@ -34,6 +39,16 @@ public class ItemController {
         ItemDto itemDto = itemService.getItem(id);
         model.addAttribute("itemDto", itemDto);
         return "item";
+    }
+
+    @GetMapping("/category/{id}")
+    public String getItemsByCategory(@PathVariable Integer id, Model model){
+        Category category = categoryService.getCategoryById(id);
+        List<ItemDto> itemsByCategory = itemService.getItemsByCategory(category);
+        List<CategoryDto> categories = categoryService.getCategories();
+        model.addAttribute("items", itemsByCategory);
+        model.addAttribute("categories", categories);
+        return "index";
     }
 
     @GetMapping("/add")

@@ -1,6 +1,7 @@
 package by.itstep.onlineauctionsystem.service;
 
 import by.itstep.onlineauctionsystem.model.bidding.BidRequest;
+import by.itstep.onlineauctionsystem.model.category.Category;
 import by.itstep.onlineauctionsystem.model.item.AuctionData;
 import by.itstep.onlineauctionsystem.model.item.Item;
 import by.itstep.onlineauctionsystem.model.item.ItemData;
@@ -56,17 +57,30 @@ public class ItemService {
     }
 
     public ItemDto getItem(Long id) {
-
         Optional<Item> itemOpt = itemRepository.findById(id);
         Item item = itemOpt.get();
-
-
         ItemDto itemDto = createItemDto(item);
         return itemDto;
     }
 
     public List<ItemDto> getAllItems() {
         List<Item> items = itemRepository.findAll();
+        List<ItemDto> itemsDto = new ArrayList<>();
+        for (Item item : items) {
+            ItemDto itemDto = createItemDto(item);
+            itemsDto.add(itemDto);
+        }
+        return itemsDto;
+    }
+
+    public List<ItemDto> getItemsByCategory(Category category) {
+        List<Long> itemsId = new ArrayList<>();
+        List<ItemData> itemDataList = itemDataRepository.findAllByCategoryId(category);
+        for(ItemData itemData : itemDataList)
+        {
+            itemsId.add(itemData.getId());
+        }
+        List<Item> items = itemRepository.findAllById(itemsId);
         List<ItemDto> itemsDto = new ArrayList<>();
         for (Item item : items) {
             ItemDto itemDto = createItemDto(item);

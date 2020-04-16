@@ -9,6 +9,9 @@ import javax.validation.constraints.NotNull;
 public class CategoryDto {
     @NotEmpty
     @NotNull
+    private  String id;
+    @NotEmpty
+    @NotNull
     private String name;
     private String parentId;
     private String upperBound;

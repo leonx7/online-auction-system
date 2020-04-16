@@ -8,20 +8,34 @@
 <body>
 <script th:replace="fragments/header :: header"></script>
 <script th:replace="fragments/header :: timerElement"></script>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-3" th:each="itemDto, iterStat : ${itemsDto}" th:with="id='Timer-' + ${iterStat.index}" style="margin-top: 1.5em">
+        <div class="col-2" style="margin-top: 1.5em">
+            <h5 align="center">Categories</h5>
+            <div class="list-group" th:each="category : ${categories}">
+                <div class="btn-group dropright" th:if="(${category.parentId} == 0)">
+                    <a th:href="@{/category/{categoryId}(categoryId=${category.id})}"  type="button" class="btn btn-light" th:text="${category.name}" style="text-align: left; width: 130px"></a>
+                    <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropright</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <!-- Dropdown menu links -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" th:each="item, iterStat : ${items}" th:with="id='Timer-' + ${iterStat.index}" style="margin-top: 1.5em">
             <div class="card h-100 text-center">
-                <img class="card-img-top" th:src="*{'data:image/png;base64,'+itemDto.encodedImages.get(0)}"
-                     th:alt="${itemDto.title}" style="height: 270px">
+                <img class="card-img-top" th:src="*{'data:image/png;base64,'+item.encodedImages.get(0)}"
+                     th:alt="${item.title}" style="height: 230px">
                 <div class="card-body">
-                    <a th:href="@{/item/{itemId}(itemId=${itemDto.id})}"><h5 class="card-title"
-                                                                         th:text="${itemDto.title}"></h5></a>
-                    <p class="card-text" th:text="'Starting price: ' + ${itemDto.price} + ' BYR'"></p>
-                    <p class="card-text" th:text="'End date: ' + ${itemDto.formattedEndTime}"></p>
+                    <a th:href="@{/item/{itemId}(itemId=${item.id})}"><h5 class="card-title"
+                                                                         th:text="${item.title}"></h5></a>
+                    <p class="card-text" th:text="'Starting price: ' + ${item.price} + ' BYR'"></p>
+                    <p class="card-text" th:text="'End date: ' + ${item.formattedEndTime}"></p>
                         <span th:id="${id}"  name="timer" class="card-text"></span>
                         <script th:inline="javascript">
-                            var endTime = [[${itemDto.endTime}]];
+                            var endTime = [[${item.endTime}]];
                             var id = [[${id}]]
                             console.log(endTime);
                             console.log(id);

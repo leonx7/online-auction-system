@@ -2,93 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1576bd89-f8ab-4e94-ab2f-7b714e5aab0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_3_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_2_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity5_3_0_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_bootstrap_3_3_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_3_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_sockjs_client_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_stomp_websocket_2_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_webjars_locator_core_0_35.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/BiddingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/Bid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/BidRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/BidResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/category/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/category/CategoryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/AuctionData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/ItemData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/ItemDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/AuctionDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/BidRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ImageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ItemDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/RefererRedirectionAuthenticationSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/BiddingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/ImageStorageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/ItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/websocket/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/category.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/item.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/generated-sources/annotations/by/itstep/onlineauctionsystem/mapper/ItemMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online-auction-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/online-auction-system.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/LotController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/exeption/FileStorageException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/exeption/FileStorageException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/Lot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/Photo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/user/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/user/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/LotRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/PhotoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/category/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/category/CategoryDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ItemDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ItemDataRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/LotService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/PhotoStorageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/ItemService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lot.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/OnlineAuctionSystem.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/lot.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/welcome.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,20 +75,12 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1ZEA8IMqJASK8AiGleqDuqOFkFL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -169,17 +91,18 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/online-auction-system" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VoteApp" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -227,7 +150,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+    <configuration default="true" type="JetRunConfigurationType">
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -240,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
       <option name="vmParameters" />
       <option name="alternativeJrePath" />
@@ -342,7 +265,11 @@
       <workItem from="1586691365689" duration="13487000" />
       <workItem from="1586768631195" duration="12651000" />
       <workItem from="1586847711216" duration="17616000" />
-      <workItem from="1586952622151" duration="707000" />
+      <workItem from="1586952622151" duration="954000" />
+      <workItem from="1586980467965" duration="54000" />
+      <workItem from="1586980534521" duration="310000" />
+      <workItem from="1586980857310" duration="111000" />
+      <workItem from="1587023447848" duration="13512000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add login and registration for user">
       <created>1584394262733</created>
@@ -358,20 +285,25 @@
       <option name="project" value="LOCAL" />
       <updated>1585312186572</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add list of items, bidding system, category UI">
+      <created>1586953432488</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586953432488</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -406,6 +338,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -413,21 +346,26 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: add login and registration for user" />
     <MESSAGE value="feat: add a new lot, display a lot" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add a new lot, display a lot" />
+    <MESSAGE value="feat: add list of items, bidding system, category UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add list of items, bidding system, category UI" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Assign_Data_Sources" timestamp="1585817413750">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1585817413750" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1586980601080">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1586980601080" />
     <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1586276115078">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586276115078" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585679912012">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586980747747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585679912012" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586980747747" />
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1585829732933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -468,74 +406,74 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586849799002" />
-    <state x="307" y="7" key="CommitChangelistDialog2" timestamp="1585312185531">
+    <state x="307" y="7" key="CommitChangelistDialog2" timestamp="1586953430168">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="307" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585312185531" />
-    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1586351044504">
+    <state x="307" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586953430168" />
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1587029034809">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586351044504" />
-    <state width="1493" height="145" key="GridCell.Tab.0.bottom" timestamp="1586900168699">
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587029034809" />
+    <state width="1493" height="131" key="GridCell.Tab.0.bottom" timestamp="1587045509655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="145" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
-    <state width="1493" height="145" key="GridCell.Tab.0.center" timestamp="1586900168699">
+    <state width="1493" height="131" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587045509655" />
+    <state width="1493" height="131" key="GridCell.Tab.0.center" timestamp="1587045509655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="145" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
-    <state width="1493" height="145" key="GridCell.Tab.0.left" timestamp="1586900168699">
+    <state width="1493" height="131" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587045509655" />
+    <state width="1493" height="131" key="GridCell.Tab.0.left" timestamp="1587045509655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="145" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
-    <state width="1493" height="145" key="GridCell.Tab.0.right" timestamp="1586900168699">
+    <state width="1493" height="131" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587045509655" />
+    <state width="1493" height="131" key="GridCell.Tab.0.right" timestamp="1587045509655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="145" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
-    <state width="1493" height="145" key="GridCell.Tab.1.bottom" timestamp="1586900168699">
+    <state width="1493" height="131" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587045509655" />
+    <state width="1493" height="131" key="GridCell.Tab.1.bottom" timestamp="1587045509656">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="145" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
-    <state width="1493" height="145" key="GridCell.Tab.1.center" timestamp="1586900168699">
+    <state width="1493" height="131" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587045509656" />
+    <state width="1493" height="131" key="GridCell.Tab.1.center" timestamp="1587045509655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="145" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
-    <state width="1493" height="145" key="GridCell.Tab.1.left" timestamp="1586900168699">
+    <state width="1493" height="131" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587045509655" />
+    <state width="1493" height="131" key="GridCell.Tab.1.left" timestamp="1587045509655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="145" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
-    <state width="1493" height="145" key="GridCell.Tab.1.right" timestamp="1586900168699">
+    <state width="1493" height="131" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587045509655" />
+    <state width="1493" height="131" key="GridCell.Tab.1.right" timestamp="1587045509655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="145" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586900168699" />
-    <state width="1493" height="368" key="GridCell.Tab.2.bottom" timestamp="1586558601919">
+    <state width="1493" height="131" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587045509655" />
+    <state width="1493" height="190" key="GridCell.Tab.2.bottom" timestamp="1587045507177">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="368" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586558601919" />
-    <state width="1493" height="368" key="GridCell.Tab.2.center" timestamp="1586558601919">
+    <state width="1493" height="190" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587045507177" />
+    <state width="1493" height="190" key="GridCell.Tab.2.center" timestamp="1587045507177">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="368" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1586558601919" />
-    <state width="1493" height="368" key="GridCell.Tab.2.left" timestamp="1586558601919">
+    <state width="1493" height="190" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1587045507177" />
+    <state width="1493" height="190" key="GridCell.Tab.2.left" timestamp="1587045507177">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="368" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1586558601919" />
-    <state width="1493" height="368" key="GridCell.Tab.2.right" timestamp="1586558601919">
+    <state width="1493" height="190" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1587045507177" />
+    <state width="1493" height="190" key="GridCell.Tab.2.right" timestamp="1587045507177">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="368" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1586558601919" />
+    <state width="1493" height="190" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1587045507177" />
     <state x="439" y="111" key="NewModule_or_Project.wizard" timestamp="1586168803771">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="439" y="111" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1586168803771" />
-    <state x="277" y="0" width="981" height="802" key="SettingsEditor" timestamp="1586550429624">
+    <state x="277" y="0" width="981" height="802" key="SettingsEditor" timestamp="1586980839936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="0" width="981" height="802" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586550429624" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1585312230180">
+    <state x="277" y="0" width="981" height="802" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586980839936" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1586953452671">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585312230180" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586953452671" />
     <state x="454" y="146" key="VcsDiffUtil.ChangesDialog" timestamp="1585253404484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
