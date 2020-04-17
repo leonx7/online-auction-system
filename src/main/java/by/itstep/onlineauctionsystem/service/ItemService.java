@@ -1,5 +1,6 @@
 package by.itstep.onlineauctionsystem.service;
 
+import by.itstep.onlineauctionsystem.model.bidding.Bid;
 import by.itstep.onlineauctionsystem.model.bidding.BidRequest;
 import by.itstep.onlineauctionsystem.model.category.Category;
 import by.itstep.onlineauctionsystem.model.item.AuctionData;
@@ -34,6 +35,8 @@ public class ItemService {
     AuctionDataRepository auctionDataRepository;
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    BiddingService biddingService;
 
     public Item saveItem(ItemDto itemDto, Principal principal) {
         User user = userRepository.findByEmail(principal.getName());
@@ -100,6 +103,7 @@ public class ItemService {
         Optional<ItemData> itemDataOpt = itemDataRepository.findById(item.getId());
         ItemData itemData = itemDataOpt.get();
         List<String> images = imageStorageService.getPhotos(item.getId());
+        List<Bid> bids = biddingService.getBids(item);
         ItemDto itemDto = new ItemDto();
         try {
             itemDto.setId(item.getId());
@@ -110,6 +114,8 @@ public class ItemService {
             itemDto.setEndTime(item.getAuctionData().getEndTime());
             itemDto.setEncodedImages(images);
             itemDto.setFormattedEndTime(getFormattedDate(item));
+            itemDto.setEmail(item.getCreator().getEmail());
+            itemDto.setBidCount(String.valueOf(bids.size()));
         } catch (NullPointerException e) {
             e.printStackTrace();
             System.out.println("ItemDto object is null");

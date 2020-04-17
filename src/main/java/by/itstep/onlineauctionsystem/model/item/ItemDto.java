@@ -28,9 +28,12 @@ public class ItemDto {
     @NotNull
     @NotEmpty
     private String endTime;
+    private String formattedEndTime;
+    private String email;
+    private String bidCount;
     @NotNull
     @NotEmpty
     private MultipartFile[] images;
     private List<String> encodedImages;
-    private String formattedEndTime;
+
 }

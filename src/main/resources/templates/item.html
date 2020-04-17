@@ -30,22 +30,43 @@
                 console.log('Connected: ' + frame);
                 stompClient.subscribe('/topic/bidResponse', function (bidResponse) {
                     showBidResponse(JSON.parse(bidResponse.body).content);
+                    showUsername(JSON.parse(bidResponse.body).username);
+                    showCurrentBid(JSON.parse(bidResponse.body).currentBid);
                 });
             });
         }
 
         function sendBidRequest() {
-            console.log($("#bid").val());
-            console.log($("#increment").val());
             stompClient.send("/app/bidRequest", {}, JSON.stringify({
                 'id': $("#id").val(),
                 'bid': $("#bid").val(),
                 'increment': $("#increment").val(),
             }));
+            $("#bidToken").text("bid");
         }
 
         function showBidResponse(bidResponse) {
             $("#bid").val(bidResponse);
+        }
+
+        function showUsername(bidResponse) {
+            let username = $('#username').text();
+            if(bidResponse == username)
+            {
+                $("#bidLabel").css("color", "green");
+                $("#bid").css("color", "green");
+                $("#bidLabel").text("Your bid wins!");
+            }
+            else if((bidResponse != username) && ($("#bidToken").text() == "bid"))
+            {
+                $("#bidLabel").css("color", "red");
+                $("#bid").css("color", "red");
+                $("#bidLabel").text("Your bit has been exceeded!");
+            }
+        }
+
+        function showCurrentBid(bidResponse) {
+            $("#currentBid").text("Current bid " + bidResponse + " BYR");
         }
 
         $(function () {
@@ -57,6 +78,8 @@
     </script>
 </head>
 <body onload="connect()">
+<span id="username" sec:authentication="name" hidden/>
+<span id="bidToken"  hidden>!bid</span>
 <header>
     <script th:replace="fragments/header :: header"></script>
     <script th:inline="javascript">
@@ -74,7 +97,7 @@
     </script>
 </header>
 <div class="container">
-    <div class="card w-150" style="margin: 1.5em auto">
+    <div class="card" style="margin: 1.5em auto">
         <div class="card-header" style="text-align: center" th:text="${itemDto.title}"></div>
         <div class="card-body">
             <div class="row">
@@ -86,10 +109,12 @@
                     <input type="hidden" id="id" th:value="${itemDto.id}"/>
                     <input type="hidden" id="increment" th:value="${itemDto.increment}"/>
                     <h5 class="card-title" th:text="'End date: ' + ${itemDto.formattedEndTime}"></h5>
-                    <h5 class="card-title" th:text="'Current price: ' + ${itemDto.price} + ' BYR'"></h5>
+                    <h5 id="currentBid" class="card-title" th:text="'Current bid: ' + ${itemDto.price} + ' BYR'"></h5>
                     <span id="timer" class="card-text"></span>
                     <div class="col-sm-8" style="margin-top: 1.5em">
-                        <span class="card-text">Bid directly</span>
+                        <span>
+                            <p class="card-text" id="bidLabel">Bid directly</p>
+                        </span>
                         <div class="input-group" style="margin-bottom: 1.5em">
                             <input type="text" id="bid" class="form-control"
                                    th:placeholder="'BYR ' + (${itemDto.price} + ${itemDto.increment})"
@@ -112,6 +137,16 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+        <form th:action="@{/sendEmail/{itemId}(itemId=${itemDto.id})}" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+            <input type="hidden" th:value="${itemDto.email}" name="to">
+            <p>Contacting a seller:</p>
+            <input type="text" class="form-control" placeholder="Subject:" name="subject">
+            <textarea class="form-control" name="text" style="height: 200px; margin-top: 1.5em" placeholder="Your message:"></textarea>
+            <button class="btn btn-info" type="submit" style="alignment: right; margin-top: 1.5em">Send message</button>
+        </form>
     </div>
 </div>
 </body>

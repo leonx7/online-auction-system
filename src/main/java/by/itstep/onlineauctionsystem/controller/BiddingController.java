@@ -26,6 +26,6 @@ public class BiddingController {
     public BidResponse placeBid(Principal prinsipal, BidRequest bid) throws Exception {
         itemService.updatePrice(bid);
         biddingService.saveBid(prinsipal, bid);
-        return biddingService.updateBid(bid);
+        return biddingService.updateBid(prinsipal, bid);
     }
 }
