@@ -11,5 +11,4 @@ public class RefererRedirectionAuthenticationSuccessHandler
         super();
         setUseReferer(true);
     }
-
 }

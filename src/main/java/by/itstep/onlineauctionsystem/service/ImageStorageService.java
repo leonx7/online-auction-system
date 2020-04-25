@@ -7,7 +7,6 @@ import by.itstep.onlineauctionsystem.model.item.Image;
 import by.itstep.onlineauctionsystem.repository.ItemDataRepository;
 import by.itstep.onlineauctionsystem.repository.ItemRepository;
 import by.itstep.onlineauctionsystem.repository.ImageRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -20,18 +19,20 @@ import java.util.Optional;
 @Service
 public class ImageStorageService {
 
-    @Autowired
-    ImageRepository imageRepository;
-    @Autowired
-    ItemRepository itemRepository;
-    @Autowired
-    ItemDataRepository itemDataRepository;
+    final ImageRepository imageRepository;
+    final ItemRepository itemRepository;
+    final ItemDataRepository itemDataRepository;
 
-    public void save(ItemDto itemDto, ItemData itemData){
+    public ImageStorageService(ImageRepository imageRepository, ItemRepository itemRepository, ItemDataRepository itemDataRepository) {
+        this.imageRepository = imageRepository;
+        this.itemRepository = itemRepository;
+        this.itemDataRepository = itemDataRepository;
+    }
+
+    public void save(ItemDto itemDto, ItemData itemData) {
         MultipartFile[] files = itemDto.getImages();
-        for(MultipartFile file : files){
-            if(!file.isEmpty())
-            {
+        for (MultipartFile file : files) {
+            if (!file.isEmpty()) {
                 try {
                     Image image = new Image();
                     image.setItemData(itemData);
@@ -45,7 +46,7 @@ public class ImageStorageService {
         }
     }
 
-    public List<String> getPhotos(Long id){
+    public List<String> getPhotos(Long id) {
         Optional<ItemData> itemDataOptOpt = itemDataRepository.findById(id);
         ItemData itemData = itemDataOptOpt.get();
         List<Image> images = imageRepository.findByItemData(itemData);

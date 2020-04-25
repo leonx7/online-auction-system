@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 public class CategoryDto {
     @NotEmpty
     @NotNull
-    private  String id;
+    private String id;
     @NotEmpty
     @NotNull
     private String name;

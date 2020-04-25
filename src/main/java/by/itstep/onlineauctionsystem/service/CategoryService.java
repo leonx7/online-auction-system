@@ -3,7 +3,6 @@ package by.itstep.onlineauctionsystem.service;
 import by.itstep.onlineauctionsystem.model.category.Category;
 import by.itstep.onlineauctionsystem.model.category.CategoryDto;
 import by.itstep.onlineauctionsystem.repository.CategoryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,35 +12,36 @@ import java.util.Optional;
 @Service
 public class CategoryService {
 
-    @Autowired
-    CategoryRepository categoryRepository;
+    final CategoryRepository categoryRepository;
+
+    public CategoryService(CategoryRepository categoryRepository) {
+        this.categoryRepository = categoryRepository;
+    }
 
 
-    public Category createCategory(CategoryDto categoryDto){
+    public Category createCategory(CategoryDto categoryDto) {
         Category category = new Category();
         category.setName(categoryDto.getName());
         categoryRepository.save(category);
         return category;
     }
 
-    public List<CategoryDto> getCategories(){
+    public List<CategoryDto> getCategories() {
         List<CategoryDto> categoriesDto = new ArrayList<>();
         List<Category> categories = categoryRepository.findAll();
-        for(Category category : categories)
-        {
+        for (Category category : categories) {
             categoriesDto.add(createCategoryDto(category));
         }
-
         return categoriesDto;
     }
 
-    public Category getCategoryById(Integer id){
+    public Category getCategoryById(Integer id) {
         Optional<Category> categotyOpt = categoryRepository.findById(id);
         Category category = categotyOpt.get();
         return category;
     }
 
-    public CategoryDto createCategoryDto(Category category){
+    public CategoryDto createCategoryDto(Category category) {
         CategoryDto categoryDto = new CategoryDto();
         categoryDto.setId(String.valueOf(category.getId()));
         categoryDto.setName(category.getName());

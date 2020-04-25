@@ -1,7 +1,6 @@
 package by.itstep.onlineauctionsystem.service;
 
 import by.itstep.onlineauctionsystem.model.bidding.Bid;
-import by.itstep.onlineauctionsystem.model.bidding.BidRequest;
 import by.itstep.onlineauctionsystem.model.category.Category;
 import by.itstep.onlineauctionsystem.model.item.AuctionData;
 import by.itstep.onlineauctionsystem.model.item.Item;
@@ -12,7 +11,6 @@ import by.itstep.onlineauctionsystem.repository.AuctionDataRepository;
 import by.itstep.onlineauctionsystem.repository.ItemDataRepository;
 import by.itstep.onlineauctionsystem.repository.ItemRepository;
 import by.itstep.onlineauctionsystem.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.security.Principal;
@@ -25,18 +23,21 @@ import java.util.Optional;
 @Service
 public class ItemService {
 
-    @Autowired
-    ItemRepository itemRepository;
-    @Autowired
-    ItemDataRepository itemDataRepository;
-    @Autowired
-    ImageStorageService imageStorageService;
-    @Autowired
-    AuctionDataRepository auctionDataRepository;
-    @Autowired
-    UserRepository userRepository;
-    @Autowired
-    BiddingService biddingService;
+    final ItemRepository itemRepository;
+    final ItemDataRepository itemDataRepository;
+    final ImageStorageService imageStorageService;
+    final AuctionDataRepository auctionDataRepository;
+    final UserRepository userRepository;
+    final BiddingService biddingService;
+
+    public ItemService(ItemRepository itemRepository, ItemDataRepository itemDataRepository, ImageStorageService imageStorageService, AuctionDataRepository auctionDataRepository, UserRepository userRepository, BiddingService biddingService) {
+        this.itemRepository = itemRepository;
+        this.itemDataRepository = itemDataRepository;
+        this.imageStorageService = imageStorageService;
+        this.auctionDataRepository = auctionDataRepository;
+        this.userRepository = userRepository;
+        this.biddingService = biddingService;
+    }
 
     public Item saveItem(ItemDto itemDto, Principal principal) {
         User user = userRepository.findByEmail(principal.getName());
@@ -79,8 +80,7 @@ public class ItemService {
     public List<ItemDto> getItemsByCategory(Category category) {
         List<Long> itemsId = new ArrayList<>();
         List<ItemData> itemDataList = itemDataRepository.findAllByCategoryId(category);
-        for(ItemData itemData : itemDataList)
-        {
+        for (ItemData itemData : itemDataList) {
             itemsId.add(itemData.getId());
         }
         List<Item> items = itemRepository.findAllById(itemsId);
@@ -121,14 +121,5 @@ public class ItemService {
             System.out.println("ItemDto object is null");
         }
         return itemDto;
-    }
-
-    public String updatePrice(BidRequest bid) {
-        Optional<AuctionData> auctionDataOpt = auctionDataRepository.findById(Long.valueOf(bid.getId()));
-        AuctionData auctionData = auctionDataOpt.get();
-        String price = bid.getBid();
-        auctionData.setCurrentPrice(Double.valueOf(price));
-        auctionDataRepository.save(auctionData);
-        return price;
     }
 }

@@ -7,10 +7,13 @@ import by.itstep.onlineauctionsystem.model.item.ItemDto;
 import by.itstep.onlineauctionsystem.service.CategoryService;
 import by.itstep.onlineauctionsystem.service.ItemService;
 import by.itstep.onlineauctionsystem.service.ImageStorageService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+
 
 import java.security.Principal;
 import java.util.List;
@@ -18,12 +21,15 @@ import java.util.List;
 @Controller
 public class ItemController {
 
-    @Autowired
-    ItemService itemService;
-    @Autowired
-    ImageStorageService imageStorageService;
-    @Autowired
-    CategoryService categoryService;
+    final ItemService itemService;
+    final ImageStorageService imageStorageService;
+    final CategoryService categoryService;
+
+    public ItemController(ItemService itemService, ImageStorageService imageStorageService, CategoryService categoryService) {
+        this.itemService = itemService;
+        this.imageStorageService = imageStorageService;
+        this.categoryService = categoryService;
+    }
 
     @GetMapping("/")
     public String getIndex(Model model) {
@@ -42,7 +48,7 @@ public class ItemController {
     }
 
     @GetMapping("/category/{id}")
-    public String getItemsByCategory(@PathVariable Integer id, Model model){
+    public String getItemsByCategory(@PathVariable Integer id, Model model) {
         Category category = categoryService.getCategoryById(id);
         List<ItemDto> itemsByCategory = itemService.getItemsByCategory(category);
         List<CategoryDto> categories = categoryService.getCategories();

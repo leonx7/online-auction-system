@@ -1,9 +1,7 @@
 package by.itstep.onlineauctionsystem.controller;
 
-import by.itstep.onlineauctionsystem.exeption.UsernameExistsException;
 import by.itstep.onlineauctionsystem.model.user.UserDto;
 import by.itstep.onlineauctionsystem.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,8 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/registration")
     public String registration(Model model) {
@@ -40,5 +41,4 @@ public class UserController {
             model.addAttribute("message", "You have been logged out successfully.");
         return "login";
     }
-
 }

@@ -35,5 +35,4 @@ public class ItemDto {
     @NotEmpty
     private MultipartFile[] images;
     private List<String> encodedImages;
-
 }

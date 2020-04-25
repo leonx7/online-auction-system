@@ -1,6 +1,7 @@
 package by.itstep.onlineauctionsystem.model.user;
 
 import lombok.Data;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 

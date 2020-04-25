@@ -7,7 +7,7 @@
     <title>Item</title>
     <script th:replace="fragments/header :: headerElement"></script>
     <script th:replace="fragments/header :: timerElement"></script>
-    <script type='application/javascript' src="/webjars/jquery/jquery.min.js" ></script>
+    <script type='application/javascript' src="/webjars/jquery/jquery.min.js"></script>
     <script type='application/javascript' src="/webjars/sockjs-client/sockjs.min.js"></script>
     <script type='application/javascript' src="/webjars/stomp-websocket/stomp.min.js"></script>
     <script>
@@ -45,23 +45,31 @@
             $("#bidToken").text("bid");
         }
 
+        function sendAutoBidRequest() {
+            stompClient.send("/app/autoBidRequest", {}, JSON.stringify({
+                'id': $("#id").val(),
+                'bid': $("#bid").val(),
+                'increment': $("#increment").val(),
+            }));
+        }
+
         function showBidResponse(bidResponse) {
             $("#bid").val(bidResponse);
         }
 
         function showUsername(bidResponse) {
             let username = $('#username').text();
-            if(bidResponse == username)
-            {
+            console.log(username);
+            console.log(bidResponse);
+            if (bidResponse == username) {
+                $("#bidToken").text("bid");
                 $("#bidLabel").css("color", "green");
                 $("#bid").css("color", "green");
                 $("#bidLabel").text("Your bid wins!");
-            }
-            else if((bidResponse != username) && ($("#bidToken").text() == "bid"))
-            {
+            } else if ((bidResponse != username) && ($("#bidToken").text() == "bid")) {
                 $("#bidLabel").css("color", "red");
                 $("#bid").css("color", "red");
-                $("#bidLabel").text("Your bit has been exceeded!");
+                $("#bidLabel").text("Your bid has been exceeded!");
             }
         }
 
@@ -73,13 +81,42 @@
             $("#bidBtn").on('submit', function (e) {
                 e.preventDefault();
             });
-            $( "#bidBtn" ).click(function() { sendBidRequest(); });
+            $("#bidBtn").click(function () {
+                sendBidRequest();
+                sendAutoBidRequest()
+            });
         });
+    </script>
+    <script>
+        $(function () {
+            $("#autoBidBtn").click(function (event) {
+                event.preventDefault();
+
+                let id = $("#id").val();
+                let maximumBid = $("#autoBid").val();
+                let autoBidDto = new Object();
+                autoBidDto.id = id;
+                autoBidDto.maximumBid = maximumBid;
+
+                $.ajax({
+                    url: '/autoBid',
+                    data: autoBidDto,
+                    type: "POST",
+                    success: function () {
+                        $("#autoBidLabel").css("color", "green");
+                        $("#autoBidLabel").text("Auto bid was successfully placed!")
+                    },
+                    error: function (a) {
+                        console.log(a);
+                    }
+                });
+            })
+        })
     </script>
 </head>
 <body onload="connect()">
+<span id="bidToken" hidden>!bid</span>
 <span id="username" sec:authentication="name" hidden/>
-<span id="bidToken"  hidden>!bid</span>
 <header>
     <script th:replace="fragments/header :: header"></script>
     <script th:inline="javascript">
@@ -88,7 +125,7 @@
         initializeTimer(endTime, id);
     </script>
     <script sec:authorize="!isAuthenticated()">
-        $(document).ready(function() {
+        $(document).ready(function () {
             $("#bidBtn").prop('readonly', true);
             $("#bidBtn").prop('type', 'button');
             $("#bidBtn").attr('data-toggle', 'modal');
@@ -106,7 +143,7 @@
                          th:src="*{'data:image/png;base64,'+image}" style="width:200px; height: 200px">
                 </div>
                 <div class="col-sm-6">
-                    <input type="hidden" id="id" th:value="${itemDto.id}"/>
+                    <input type="hidden" id="id" th:value="${itemDto.id}" name="itemId"/>
                     <input type="hidden" id="increment" th:value="${itemDto.increment}"/>
                     <h5 class="card-title" th:text="'End date: ' + ${itemDto.formattedEndTime}"></h5>
                     <h5 id="currentBid" class="card-title" th:text="'Current bid: ' + ${itemDto.price} + ' BYR'"></h5>
@@ -124,11 +161,14 @@
                                 </button>
                             </div>
                         </div>
-                        <span class="card-text">Place automatic bid</span>
+                        <span>
+                            <p class="card-text" id="autoBidLabel">Place automatic bid</p>
+                        </span>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="BYR"/>
+                            <input type="text" class="form-control" placeholder="BYR" id="autoBid" name="autoBid"/>
                             <div class="input-group-append" id="button-addon5">
-                                <button class="btn btn-outline-secondary" type="submit" style="width: 120px">Auto
+                                <button class="btn btn-outline-secondary" type="submit" id="autoBidBtn"
+                                        style="width: 120px">Auto
                                     bid
                                 </button>
                             </div>
@@ -144,7 +184,8 @@
             <input type="hidden" th:value="${itemDto.email}" name="to">
             <p>Contacting a seller:</p>
             <input type="text" class="form-control" placeholder="Subject:" name="subject">
-            <textarea class="form-control" name="text" style="height: 200px; margin-top: 1.5em" placeholder="Your message:"></textarea>
+            <textarea class="form-control" name="text" style="height: 200px; margin-top: 1.5em"
+                      placeholder="Your message:"></textarea>
             <button class="btn btn-info" type="submit" style="alignment: right; margin-top: 1.5em">Send message</button>
         </form>
     </div>

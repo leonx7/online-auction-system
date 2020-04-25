@@ -4,7 +4,12 @@ import by.itstep.onlineauctionsystem.model.bidding.Bid;
 import by.itstep.onlineauctionsystem.model.user.User;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.MapsId;
 import java.util.Set;
 
 @Entity
@@ -24,5 +29,6 @@ public class AuctionData {
     private Item item;
     @OneToMany(mappedBy = "auctionData")
     Set<Bid> bids;
-
+    @OneToMany(mappedBy = "auctionData")
+    Set<Bid> autoBids;
 }

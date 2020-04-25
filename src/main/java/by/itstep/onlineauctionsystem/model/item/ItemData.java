@@ -3,7 +3,13 @@ package by.itstep.onlineauctionsystem.model.item;
 import by.itstep.onlineauctionsystem.model.category.Category;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.MapsId;
 import java.util.Set;
 
 @Entity
@@ -19,6 +25,6 @@ public class ItemData {
     @OneToOne
     @MapsId
     private Item item;
-    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY, mappedBy = "itemData")
+    @OneToMany(mappedBy = "itemData")
     private Set<Image> images;
 }
