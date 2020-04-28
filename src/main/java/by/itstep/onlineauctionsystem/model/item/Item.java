@@ -4,6 +4,7 @@ import by.itstep.onlineauctionsystem.model.user.User;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,8 +24,8 @@ public class Item {
     private long id;
     @ManyToOne
     private User creator;
-    @OneToOne(mappedBy = "item")
+    @OneToOne(mappedBy = "item", cascade= CascadeType.ALL)
     private ItemData itemData;
-    @OneToOne(mappedBy = "item")
+    @OneToOne(mappedBy = "item", cascade=CascadeType.ALL)
     private AuctionData auctionData;
 }

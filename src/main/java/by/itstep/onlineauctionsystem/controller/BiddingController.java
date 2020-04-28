@@ -11,7 +11,6 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.transaction.Transactional;
 import java.security.Principal;
 
 @Controller
@@ -33,7 +32,6 @@ public class BiddingController {
 
     @MessageMapping("/autoBidRequest")
     @SendTo("/topic/bidResponse")
-    @Transactional
     public BidResponse placeAutoBid(Principal principal, BidRequest bid) throws Exception {
         return autoBiddingService.placeAutoBid(principal, bid);
     }

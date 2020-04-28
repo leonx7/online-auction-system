@@ -11,8 +11,13 @@ import by.itstep.onlineauctionsystem.repository.AuctionDataRepository;
 import by.itstep.onlineauctionsystem.repository.ItemDataRepository;
 import by.itstep.onlineauctionsystem.repository.ItemRepository;
 import by.itstep.onlineauctionsystem.repository.UserRepository;
+import org.hibernate.search.jpa.FullTextEntityManager;
+import org.hibernate.search.jpa.Search;
+import org.hibernate.search.query.dsl.QueryBuilder;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.security.Principal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -22,6 +27,9 @@ import java.util.Optional;
 
 @Service
 public class ItemService {
+
+    @PersistenceContext
+    EntityManager entityManager;
 
     final ItemRepository itemRepository;
     final ItemDataRepository itemDataRepository;
@@ -78,14 +86,9 @@ public class ItemService {
     }
 
     public List<ItemDto> getItemsByCategory(Category category) {
-        List<Long> itemsId = new ArrayList<>();
-        List<ItemData> itemDataList = itemDataRepository.findAllByCategoryId(category);
-        for (ItemData itemData : itemDataList) {
-            itemsId.add(itemData.getId());
-        }
-        List<Item> items = itemRepository.findAllById(itemsId);
+        List<ItemData> results = itemDataRepository.findAllByCategoryId(category);
         List<ItemDto> itemsDto = new ArrayList<>();
-        for (Item item : items) {
+        for (Item item : getItemsByItemData(results)) {
             ItemDto itemDto = createItemDto(item);
             itemsDto.add(itemDto);
         }
@@ -121,5 +124,37 @@ public class ItemService {
             System.out.println("ItemDto object is null");
         }
         return itemDto;
+    }
+
+    public List<ItemDto> getItemBySearchQuery(String searchQuery) throws InterruptedException {
+        FullTextEntityManager fullTextEntityManager = Search.getFullTextEntityManager(entityManager);
+        fullTextEntityManager.createIndexer().startAndWait();
+        QueryBuilder queryBuilder = fullTextEntityManager.getSearchFactory()
+                .buildQueryBuilder()
+                .forEntity(ItemData.class)
+                .get();
+        org.apache.lucene.search.Query query = queryBuilder
+                .keyword()
+                .onField("title")
+                .matching(searchQuery)
+                .createQuery();
+        org.hibernate.search.jpa.FullTextQuery jpaQuery
+                = fullTextEntityManager.createFullTextQuery(query, ItemData.class);
+        List<ItemData> results = jpaQuery.getResultList();
+        List<ItemDto> itemsDto = new ArrayList<>();
+        for (Item item : getItemsByItemData(results)) {
+            ItemDto itemDto = createItemDto(item);
+            itemsDto.add(itemDto);
+        }
+        return itemsDto;
+    }
+
+    public List<Item> getItemsByItemData(List<ItemData> itemDataList){
+        List<Long> itemsId = new ArrayList<>();
+        for (ItemData itemData : itemDataList) {
+            itemsId.add(itemData.getId());
+        }
+        List<Item> items = itemRepository.findAllById(itemsId);
+        return items;
     }
 }

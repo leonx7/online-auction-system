@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.security.Principal;
 import java.util.List;
@@ -66,5 +66,14 @@ public class ItemController {
     public String addItem(Principal principal, @ModelAttribute("itemDto") ItemDto itemDto) {
         Item item = itemService.saveItem(itemDto, principal);
         return "redirect:/item/" + item.getId();
+    }
+
+    @GetMapping("/search")
+    public String searchItem(@RequestParam("search")String search, Model model) throws InterruptedException {
+        List<ItemDto> itemsBySearch = itemService.getItemBySearchQuery(search);
+        List<CategoryDto> categories = categoryService.getCategories();
+        model.addAttribute("items", itemsBySearch);
+        model.addAttribute("categories", categories);
+        return "index";
     }
 }
