@@ -1,6 +1,6 @@
 package by.itstep.onlineauctionsystem.repository;
 
-import by.itstep.onlineauctionsystem.model.user.User;
+import by.itstep.onlineauctionsystem.entity.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

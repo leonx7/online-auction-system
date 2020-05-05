@@ -1,6 +1,6 @@
 package by.itstep.onlineauctionsystem.repository;
 
-import by.itstep.onlineauctionsystem.model.user.User;
+import by.itstep.onlineauctionsystem.entity.user.User;
 import junit.framework.TestCase;
 import org.junit.Test;
 import org.junit.runner.RunWith;

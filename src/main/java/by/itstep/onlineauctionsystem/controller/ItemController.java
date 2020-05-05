@@ -1,12 +1,14 @@
 package by.itstep.onlineauctionsystem.controller;
 
-import by.itstep.onlineauctionsystem.model.category.Category;
-import by.itstep.onlineauctionsystem.model.category.CategoryDto;
-import by.itstep.onlineauctionsystem.model.item.Item;
-import by.itstep.onlineauctionsystem.model.item.ItemDto;
+import by.itstep.onlineauctionsystem.entity.category.Category;
+import by.itstep.onlineauctionsystem.dto.CategoryDto;
+import by.itstep.onlineauctionsystem.entity.item.AuctionData;
+import by.itstep.onlineauctionsystem.entity.item.Item;
+import by.itstep.onlineauctionsystem.dto.ItemDto;
+import by.itstep.onlineauctionsystem.entity.user.User;
 import by.itstep.onlineauctionsystem.service.CategoryService;
 import by.itstep.onlineauctionsystem.service.ItemService;
-import by.itstep.onlineauctionsystem.service.ImageStorageService;
+import by.itstep.onlineauctionsystem.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,14 +23,14 @@ import java.util.List;
 @Controller
 public class ItemController {
 
-    final ItemService itemService;
-    final ImageStorageService imageStorageService;
-    final CategoryService categoryService;
+    private final ItemService itemService;
+    private final CategoryService categoryService;
+    private final UserService userService;
 
-    public ItemController(ItemService itemService, ImageStorageService imageStorageService, CategoryService categoryService) {
+    public ItemController(ItemService itemService, CategoryService categoryService, UserService userService) {
         this.itemService = itemService;
-        this.imageStorageService = imageStorageService;
         this.categoryService = categoryService;
+        this.userService = userService;
     }
 
     @GetMapping("/")
@@ -40,14 +42,14 @@ public class ItemController {
         return "index";
     }
 
-    @GetMapping("/item/{id}")
+    @GetMapping("item/{id}")
     public String getItem(@PathVariable Long id, Model model) {
         ItemDto itemDto = itemService.getItem(id);
         model.addAttribute("itemDto", itemDto);
         return "item";
     }
 
-    @GetMapping("/category/{id}")
+    @GetMapping("category/{id}")
     public String getItemsByCategory(@PathVariable Integer id, Model model) {
         Category category = categoryService.getCategoryById(id);
         List<ItemDto> itemsByCategory = itemService.getItemsByCategory(category);
@@ -57,23 +59,30 @@ public class ItemController {
         return "index";
     }
 
-    @GetMapping("/add")
+    @GetMapping("item/add")
     public String addItem() {
         return "add";
     }
 
-    @PostMapping("/add")
+    @PostMapping("item/add")
     public String addItem(Principal principal, @ModelAttribute("itemDto") ItemDto itemDto) {
         Item item = itemService.saveItem(itemDto, principal);
         return "redirect:/item/" + item.getId();
     }
 
-    @GetMapping("/search")
+    @GetMapping("item/search")
     public String searchItem(@RequestParam("search")String search, Model model) throws InterruptedException {
         List<ItemDto> itemsBySearch = itemService.getItemBySearchQuery(search);
         List<CategoryDto> categories = categoryService.getCategories();
         model.addAttribute("items", itemsBySearch);
         model.addAttribute("categories", categories);
         return "index";
+    }
+
+    @GetMapping("user/purchases")
+    public String showPurchases(Principal principal, Model model){
+        List<ItemDto> purchases = itemService.getItemsPurchasedByUser(principal);
+        model.addAttribute("purchases", purchases);
+        return "purchases";
     }
 }

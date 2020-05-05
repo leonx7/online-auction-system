@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of purchases</title>
+    <script th:replace="fragments/header :: headerElement"></script>
+    <script th:replace="fragments/header :: header"></script>
+</head>
+<body>
+<div class="container">
+    <h3 style="margin-top: 1.5em">My purchases</h3>
+    <div class="row" style="margin-top: 1.5em">
+        <div class="col-sm">
+            <p class="font-weight-bold" style="margin-left: 1.5em">Item</p>
+        </div>
+        <div class="col-sm">
+            <p class="font-weight-bold">Amount</p>
+        </div>
+        <div class="col-sm">
+            <p class="font-weight-bold">Date</p>
+        </div>
+        <div class="col-sm">
+            <p class="font-weight-bold">Downloads</p>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 2.5em" th:each="purchase : ${purchases}">
+        <div class="col-sm">
+            <img class="rounded-circle border border-primary"
+                 th:src="*{'data:image/png;base64,'+purchase.encodedImages.get(0)}"
+                 th:alt="${purchase.title}" style="height: 85px; width: 85px">
+        </div>
+        <div class="col-sm">
+            <p class="card-text font-weight-light" style="margin-top: 1.5em" th:text="'BYR ' + ${purchase.price}"></p>
+        </div>
+        <div class="col-sm">
+            <p class="card-text font-weight-light" style="margin-top: 1.5em" th:text="${purchase.formattedEndTime}"></p>
+        </div>
+        <div class="col-sm" style="margin-top: 1.5em">
+            <a href="/doc/Invoice-Template.docx">Invoice</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

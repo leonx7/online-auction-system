@@ -1,9 +1,9 @@
 package by.itstep.onlineauctionsystem.service;
 
 import by.itstep.onlineauctionsystem.exeption.FileStorageException;
-import by.itstep.onlineauctionsystem.model.item.ItemData;
-import by.itstep.onlineauctionsystem.model.item.ItemDto;
-import by.itstep.onlineauctionsystem.model.item.Image;
+import by.itstep.onlineauctionsystem.entity.item.ItemData;
+import by.itstep.onlineauctionsystem.dto.ItemDto;
+import by.itstep.onlineauctionsystem.entity.item.Image;
 import by.itstep.onlineauctionsystem.repository.ItemDataRepository;
 import by.itstep.onlineauctionsystem.repository.ItemRepository;
 import by.itstep.onlineauctionsystem.repository.ImageRepository;

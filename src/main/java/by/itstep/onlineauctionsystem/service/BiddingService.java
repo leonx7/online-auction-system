@@ -1,13 +1,17 @@
 package by.itstep.onlineauctionsystem.service;
 
-import by.itstep.onlineauctionsystem.model.bidding.*;
-import by.itstep.onlineauctionsystem.model.item.AuctionData;
-import by.itstep.onlineauctionsystem.model.item.Item;
-import by.itstep.onlineauctionsystem.model.user.User;
+import by.itstep.onlineauctionsystem.entity.bidding.AutoBid;
+import by.itstep.onlineauctionsystem.entity.bidding.Bid;
+import by.itstep.onlineauctionsystem.entity.item.AuctionData;
+import by.itstep.onlineauctionsystem.entity.item.Item;
+import by.itstep.onlineauctionsystem.entity.user.User;
 import by.itstep.onlineauctionsystem.repository.AuctionDataRepository;
 import by.itstep.onlineauctionsystem.repository.AutoBidRepository;
 import by.itstep.onlineauctionsystem.repository.BidRepository;
+import by.itstep.onlineauctionsystem.repository.ItemRepository;
 import by.itstep.onlineauctionsystem.repository.UserRepository;
+import by.itstep.onlineauctionsystem.websocket.BidRequest;
+import by.itstep.onlineauctionsystem.websocket.BidResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;
 
@@ -18,16 +22,18 @@ import java.util.Optional;
 @Service
 public class BiddingService {
 
-    final BidRepository bidRepository;
-    final AuctionDataRepository auctionDataRepository;
-    final UserRepository userRepository;
-    final AutoBidRepository autoBidRepository;
+    private final BidRepository bidRepository;
+    private final AuctionDataRepository auctionDataRepository;
+    private final UserRepository userRepository;
+    private final AutoBidRepository autoBidRepository;
+    private final ItemRepository itemRepository;
 
-    public BiddingService(BidRepository bidRepository, AuctionDataRepository auctionDataRepository, UserRepository userRepository, AutoBidRepository autoBidRepository) {
+    public BiddingService(BidRepository bidRepository, AuctionDataRepository auctionDataRepository, UserRepository userRepository, AutoBidRepository autoBidRepository, ItemRepository itemRepository) {
         this.bidRepository = bidRepository;
         this.auctionDataRepository = auctionDataRepository;
         this.userRepository = userRepository;
         this.autoBidRepository = autoBidRepository;
+        this.itemRepository = itemRepository;
     }
 
     public Bid saveBid(String username, BidRequest bidRequest) {
@@ -44,7 +50,6 @@ public class BiddingService {
     public BidResponse placeBid(Principal principal, BidRequest bid) throws InterruptedException {
         updatePrice(bid);
         saveBid(principal.getName(), bid);
-        Thread.sleep(1000); // simulated delay
         Double nextBid = Double.valueOf(bid.getBid()) + Double.valueOf(bid.getIncrement());
         String username = principal.getName();
         String currentBid = bid.getBid();

@@ -5,7 +5,7 @@ function connect() {
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function (frame) {
         console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/bidResponse', function (bidResponse) {
+        stompClient.subscribe('/topic/bid-response', function (bidResponse) {
             showBidResponse(JSON.parse(bidResponse.body).content);
             showUsername(JSON.parse(bidResponse.body).username);
             showCurrentBid(JSON.parse(bidResponse.body).currentBid);
@@ -14,7 +14,7 @@ function connect() {
 }
 
 function sendBidRequest() {
-    stompClient.send("/app/bidRequest", {}, JSON.stringify({
+    stompClient.send("/app/bid-request", {}, JSON.stringify({
         'id': $("#id").val(),
         'bid': $("#bid").val(),
         'increment': $("#increment").val(),
@@ -23,7 +23,7 @@ function sendBidRequest() {
 }
 
 function sendAutoBidRequest() {
-    stompClient.send("/app/autoBidRequest", {}, JSON.stringify({
+    stompClient.send("/app/auto-bid-request", {}, JSON.stringify({
         'id': $("#id").val(),
         'bid': $("#bid").val(),
         'increment': $("#increment").val(),
@@ -60,7 +60,7 @@ $(function () {
     });
     $("#bidBtn").click(function () {
         sendBidRequest();
-        sendAutoBidRequest()
+        sendAutoBidRequest();
     });
 });
 
@@ -75,7 +75,7 @@ $(function () {
         autoBidDto.maximumBid = maximumBid;
 
         $.ajax({
-            url: '/autoBid',
+            url: '/item/auto-bid',
             data: autoBidDto,
             type: "POST",
             success: function () {

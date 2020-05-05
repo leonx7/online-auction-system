@@ -19,53 +19,129 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1576bd89-f8ab-4e94-ab2f-7b714e5aab0d" name="Default Changelist" comment="feat: add automatic bidding">
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_d.fdt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_d.nvd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_d_Lucene50_0.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_d_Lucene50_0.pos" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_d_Lucene50_0.tim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.fdt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.fdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.fnm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.nvd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.nvm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f_Lucene50_0.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f_Lucene50_0.pos" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f_Lucene50_0.tim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f_Lucene50_0.tip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/segments_g" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/write.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-integrationtest.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bidding.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/csrf_token.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/timer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/by/itstep/onlineauctionsystem/repository/UserRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_6_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_11_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_2_GA.xml" beforeDir="false" />
+    <list default="true" id="1576bd89-f8ab-4e94-ab2f-7b714e5aab0d" name="Default Changelist" comment="feat: add search for items">
+      <change afterPath="$PROJECT_DIR$/NewInvoice.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_d.fdt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_d.fdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_d.fnm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_d.nvd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_d.nvm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_d.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_d_Lucene50_0.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_d_Lucene50_0.pos" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_d_Lucene50_0.tim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_d_Lucene50_0.tip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_e.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_e.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_e.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_f.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_f.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_f.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_g.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_g.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_g.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_h.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_h.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_h.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_i.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_i.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_i.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_j.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_j.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/_j.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/segments_l" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.entity.item.ItemData/write.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_h.fdt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_h.fdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_h.fnm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_h.nvd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_h.nvm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_h.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_h_Lucene50_0.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_h_Lucene50_0.pos" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_h_Lucene50_0.tim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_h_Lucene50_0.tip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_i.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_i.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_i.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/segments_j" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/InvoiceGeneratingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/websocket/WebSocketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/doc/Invoice-Template.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/ico/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/ico/flame.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/purchases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_d.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_d.nvd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_d_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_d_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_d_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.fdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.fdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.fnm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.nvd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.nvm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f_Lucene50_0.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f_Lucene50_0.pos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f_Lucene50_0.tim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/_f_Lucene50_0.tip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/by.itstep.onlineauctionsystem.model.item.ItemData/segments_g" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/online-auction-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/online-auction-system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/BiddingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/BiddingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/EmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/emailsending/EmailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/ItemData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/ItemData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/AutoBid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/entity/bidding/AutoBid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/AutoBidDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/dto/AutoBidDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/Bid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/entity/bidding/Bid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/BidRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/websocket/BidRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/bidding/BidResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/websocket/BidResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/entity/category/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/category/CategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/dto/CategoryDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/AuctionData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/entity/item/AuctionData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/entity/item/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/entity/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/ItemData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/entity/item/ItemData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/item/ItemDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/dto/ItemDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/entity/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/model/user/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/AuctionDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/AuctionDataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/AutoBidRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/AutoBidRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/BidRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/BidRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ItemDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ItemDataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/MyUserPrincipal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/AutoBiddingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/AutoBiddingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/BiddingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/BiddingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/emailsending/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/ImageStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/ImageStorageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/websocket/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/websocket/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-integrationtest.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/bidding.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/bidding.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/timer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/itstep/onlineauctionsystem/repository/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/itstep/onlineauctionsystem/repository/UserRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/by/itstep/onlineauctionsystem/mapper/ItemMapperImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +151,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit3 Test Class" />
         <option value="spring-beans.schema" />
         <option value="JavaScript File" />
         <option value="JUnit4 Test Class" />
+        <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -143,7 +219,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/todo_list_1570271293/Web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/ico" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -157,17 +233,19 @@
       <recent name="by.itstep.onlineauctionsystem.service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\static" />
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources" />
       <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\templates\static" />
       <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\static\js" />
       <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\public" />
-      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\templates" />
-      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\public\js" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
       <recent name="junit.framework.TestCase" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\static\ico" />
+      <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\static\doc" />
       <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\public" />
       <recent name="C:\Users\Lenovo\IdeaProjects\online-auction-system\src\main\resources\templates" />
     </key>
@@ -177,7 +255,7 @@
       <module name="online-auction-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.itstep.onlineauctionsystem.service.*" />
+          <option name="PATTERN" value="by.itstep.onlineauctionsystem.emailsending.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -372,7 +450,18 @@
       <workItem from="1587918021657" duration="9123000" />
       <workItem from="1587965810762" duration="1444000" />
       <workItem from="1588083358082" duration="8463000" />
-      <workItem from="1588098605852" duration="3907000" />
+      <workItem from="1588098605852" duration="4540000" />
+      <workItem from="1588157049749" duration="5172000" />
+      <workItem from="1588265228672" duration="7273000" />
+      <workItem from="1588341429540" duration="11950000" />
+      <workItem from="1588354201113" duration="10790000" />
+      <workItem from="1588365257000" duration="1391000" />
+      <workItem from="1588402131835" duration="130000" />
+      <workItem from="1588402278945" duration="1198000" />
+      <workItem from="1588407268249" duration="23439000" />
+      <workItem from="1588495326016" duration="23784000" />
+      <workItem from="1588584991304" duration="15431000" />
+      <workItem from="1588687578698" duration="10274000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add login and registration for user">
       <created>1584394262733</created>
@@ -416,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587812847385</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: add search for items">
+      <created>1588103745294</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588103745294</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,7 +570,8 @@
     <MESSAGE value="feat: add search by category" />
     <MESSAGE value="feat: add email service, update bidding service" />
     <MESSAGE value="feat: add automatic bidding" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add automatic bidding" />
+    <MESSAGE value="feat: add search for items" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add search for items" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" width="550" height="216" key="#Assign_Data_Sources" timestamp="1587638627272">
@@ -493,6 +590,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586276115078" />
+    <state x="599" y="267" key="#com.intellij.debugger.actions.ViewTextAction" timestamp="1588364687688">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="599" y="267" key="#com.intellij.debugger.actions.ViewTextAction/0.0.1536.824@0.0.1536.824" timestamp="1588364687688" />
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587570571654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -505,10 +606,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="542" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586552818309" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1587845548150">
+    <state x="574" y="122" width="388" height="647" key="#com.intellij.ide.util.MemberChooser" timestamp="1588358790642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587845548150" />
+    <state x="574" y="122" width="388" height="647" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588358790642" />
     <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584394066043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -533,70 +634,78 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="500" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1587664831150" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588100502086">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588515167140">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1588100502086" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1588515167140" />
+    <state x="536" y="165" key="#xdebugger.XInspectDialog" timestamp="1588364560009">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="536" y="165" key="#xdebugger.XInspectDialog/0.0.1536.824@0.0.1536.824" timestamp="1588364560009" />
+    <state x="524" y="115" key="#xdebugger.evaluate" timestamp="1588364676278">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="524" y="115" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1588364676278" />
     <state x="307" y="7" key="CommitChangelistDialog2" timestamp="1586953430168">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="307" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586953430168" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1587712405327">
+    <state x="465" y="93" width="978" height="638" key="DiffContextDialog" timestamp="1588366650279">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1587712405327" />
-    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1587658569870">
+    <state x="465" y="93" width="978" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1588366650279" />
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1588443791184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587658569870" />
-    <state width="1493" height="194" key="GridCell.Tab.0.bottom" timestamp="1588101402950">
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588443791184" />
+    <state width="1493" height="27" key="GridCell.Tab.0.bottom" timestamp="1588695049805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588101402950" />
-    <state width="1493" height="194" key="GridCell.Tab.0.center" timestamp="1588101402950">
+    <state width="1493" height="27" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588695049805" />
+    <state width="1493" height="27" key="GridCell.Tab.0.center" timestamp="1588695049805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="194" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588101402950" />
-    <state width="1493" height="194" key="GridCell.Tab.0.left" timestamp="1588101402950">
+    <state width="1493" height="27" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588695049805" />
+    <state width="1493" height="27" key="GridCell.Tab.0.left" timestamp="1588695049805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="194" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588101402950" />
-    <state width="1493" height="194" key="GridCell.Tab.0.right" timestamp="1588101402950">
+    <state width="1493" height="27" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588695049805" />
+    <state width="1493" height="27" key="GridCell.Tab.0.right" timestamp="1588695049805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="194" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588101402950" />
-    <state width="1493" height="7" key="GridCell.Tab.1.bottom" timestamp="1588100978752">
+    <state width="1493" height="27" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588695049805" />
+    <state width="1493" height="27" key="GridCell.Tab.1.bottom" timestamp="1588695049805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="7" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588100978752" />
-    <state width="1493" height="7" key="GridCell.Tab.1.center" timestamp="1588100978752">
+    <state width="1493" height="27" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588695049805" />
+    <state width="1493" height="27" key="GridCell.Tab.1.center" timestamp="1588695049805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="7" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588100978752" />
-    <state width="1493" height="7" key="GridCell.Tab.1.left" timestamp="1588100978751">
+    <state width="1493" height="27" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588695049805" />
+    <state width="1493" height="27" key="GridCell.Tab.1.left" timestamp="1588695049805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="7" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588100978751" />
-    <state width="1493" height="7" key="GridCell.Tab.1.right" timestamp="1588100978752">
+    <state width="1493" height="27" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588695049805" />
+    <state width="1493" height="27" key="GridCell.Tab.1.right" timestamp="1588695049805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="7" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588100978752" />
-    <state width="1493" height="156" key="GridCell.Tab.2.bottom" timestamp="1587890280659">
+    <state width="1493" height="27" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588695049805" />
+    <state width="1493" height="383" key="GridCell.Tab.2.bottom" timestamp="1588601568352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="156" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587890280659" />
-    <state width="1493" height="156" key="GridCell.Tab.2.center" timestamp="1587890280659">
+    <state width="1493" height="383" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588601568352" />
+    <state width="1493" height="383" key="GridCell.Tab.2.center" timestamp="1588601568352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="156" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1587890280659" />
-    <state width="1493" height="156" key="GridCell.Tab.2.left" timestamp="1587890280659">
+    <state width="1493" height="383" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1588601568352" />
+    <state width="1493" height="383" key="GridCell.Tab.2.left" timestamp="1588601568352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="156" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1587890280659" />
-    <state width="1493" height="156" key="GridCell.Tab.2.right" timestamp="1587890280659">
+    <state width="1493" height="383" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1588601568352" />
+    <state width="1493" height="383" key="GridCell.Tab.2.right" timestamp="1588601568352">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="156" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1587890280659" />
+    <state width="1493" height="383" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1588601568352" />
     <state x="439" y="111" key="NewModule_or_Project.wizard" timestamp="1586168803771">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -605,10 +714,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="202" y="22" width="981" height="802" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587835166164" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587812863930">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588103767012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587812863930" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588103767012" />
     <state x="454" y="146" key="VcsDiffUtil.ChangesDialog" timestamp="1585253404484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -629,6 +738,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="187" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1587836650164" />
+    <state x="192" y="27" width="579" height="795" key="find.popup" timestamp="1588342755654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="192" y="27" width="579" height="795" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1588342755654" />
     <state x="531" y="204" key="git4idea.merge.GitMergeDialog" timestamp="1585209043589">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -645,46 +758,28 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="553" y="314" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587045887623" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1588354443062">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1536.824@0.0.1536.824" timestamp="1588354443062" />
     <state x="485" y="220" key="jetbrains.nodejs.interpreters-dialog" timestamp="1585680035082">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="220" key="jetbrains.nodejs.interpreters-dialog/0.0.1536.824@0.0.1536.824" timestamp="1585680035082" />
-    <state x="209" y="33" key="new project wizard" timestamp="1586693168705">
+    <state x="209" y="33" key="new project wizard" timestamp="1588443820606">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586693168705" />
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1588443820606" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1586895521883">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1586895521883" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587839758040">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588364252072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587839758040" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588364252072" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/ItemController.java</url>
-          <line>71</line>
-          <properties class="by.itstep.onlineauctionsystem.controller.ItemController" method="searchItem">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/ItemController.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/itstep/onlineauctionsystem/controller/ItemController.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo typeName="by.itstep.onlineauctionsystem.security.MyUserPrincipal" fieldName="user" />

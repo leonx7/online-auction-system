@@ -1,7 +1,7 @@
 package by.itstep.onlineauctionsystem.repository;
 
-import by.itstep.onlineauctionsystem.model.category.Category;
-import by.itstep.onlineauctionsystem.model.item.ItemData;
+import by.itstep.onlineauctionsystem.entity.category.Category;
+import by.itstep.onlineauctionsystem.entity.item.ItemData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

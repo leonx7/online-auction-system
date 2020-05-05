@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="container">
-            <div class="col-10" th:each="item, iterStat : ${items}" th:with="id='Timer-' + ${iterStat.index}"
-                 style="margin-top: 1.5em">
+            <div class="col-10" style="margin-top: 1.5em" th:each="item, iterStat : ${items}"
+                 th:with="id='Timer-' + ${iterStat.index}, flameId='flame-' + ${iterStat.index}">
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="row">
@@ -37,7 +37,7 @@
                                      th:alt="${item.title}" style="height: 230px">
                             </div>
                             <div class="col-8">
-                                <a th:href="@{/item/{itemId}(itemId=${item.id})}"><h5 class="card-title"
+                                <a th:href="@{item/{itemId}(itemId=${item.id})}"><h5 class="card-title"
                                                                                       th:text="${item.title}"></h5></a>
                                 <p class="card-text">Minsk, Belarus</p>
                                 <p class="card-text" th:text="'Lot close: ' + ${item.formattedEndTime}"></p>
@@ -47,11 +47,15 @@
                                             <h5 th:id="${id}" name="timer" class="card-text"
                                                 style="margin-top: 4em"></h5>
                                         </div>
-                                        <div class="col-4" style="text-align: center">
-                                            <h5 class="card-text" th:text="${item.bidCount} + ' bids'"
-                                                style="margin-top:4em"></h5>
+                                        <div class="col-4" style="text-align: center; margin-top: 5em">
+                                            <span style="color: red">
+                                                 <i class="" th:id="${flameId}"
+                                                    style="display: inline; margin-right: 1em; margin-top: 4em"></i>
+                                            </span>
+                                            <h5 th:text="${item.bidCount} + ' bids'"
+                                                style="display: inline; margin-top: 4em"></h5>
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-4" style="text-align: center">
                                             <h5 class="card-text" th:text="'BYR ' + ${item.price}"
                                                 style="margin-top: 4em"></h5>
                                         </div>
@@ -59,12 +63,18 @@
                                 </div>
                                 <script th:inline="javascript">
                                     var endTime = [[${item.endTime}]];
-                                    var id = [[${id}]]
-                                    console.log(endTime);
-                                    console.log(id);
-                                    console.log($("#endTime").val());
-                                    console.log($("#timerId").val());
+                                    var id = [[${id}]];
                                     initializeTimer(endTime, id);
+                                </script>
+                                <script th:inline="javascript">
+                                    var id = [[${flameId}]];
+                                    var bidCount = [[${item.bidCount}]];
+                                    console.log(id);
+                                    (function () {
+                                        if (bidCount > 5) {
+                                            $("#" + id).addClass("fas fa-fire");
+                                        }
+                                    })();
                                 </script>
                             </div>
                         </div>

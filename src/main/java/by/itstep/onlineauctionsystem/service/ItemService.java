@@ -1,12 +1,12 @@
 package by.itstep.onlineauctionsystem.service;
 
-import by.itstep.onlineauctionsystem.model.bidding.Bid;
-import by.itstep.onlineauctionsystem.model.category.Category;
-import by.itstep.onlineauctionsystem.model.item.AuctionData;
-import by.itstep.onlineauctionsystem.model.item.Item;
-import by.itstep.onlineauctionsystem.model.item.ItemData;
-import by.itstep.onlineauctionsystem.model.item.ItemDto;
-import by.itstep.onlineauctionsystem.model.user.User;
+import by.itstep.onlineauctionsystem.entity.bidding.Bid;
+import by.itstep.onlineauctionsystem.entity.category.Category;
+import by.itstep.onlineauctionsystem.entity.item.AuctionData;
+import by.itstep.onlineauctionsystem.entity.item.Item;
+import by.itstep.onlineauctionsystem.entity.item.ItemData;
+import by.itstep.onlineauctionsystem.dto.ItemDto;
+import by.itstep.onlineauctionsystem.entity.user.User;
 import by.itstep.onlineauctionsystem.repository.AuctionDataRepository;
 import by.itstep.onlineauctionsystem.repository.ItemDataRepository;
 import by.itstep.onlineauctionsystem.repository.ItemRepository;
@@ -24,6 +24,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class ItemService {
@@ -156,5 +157,15 @@ public class ItemService {
         }
         List<Item> items = itemRepository.findAllById(itemsId);
         return items;
+    }
+
+    public List<ItemDto> getItemsPurchasedByUser(Principal principal){
+        List<Item> purchases = itemRepository.findItemByBuyer(principal.getName());
+        List<ItemDto> itemsDto = new ArrayList<>();
+        for (Item item : purchases) {
+            ItemDto itemDto = createItemDto(item);
+            itemsDto.add(itemDto);
+        }
+        return itemsDto;
     }
 }

@@ -1,7 +1,7 @@
 package by.itstep.onlineauctionsystem.service;
 
-import by.itstep.onlineauctionsystem.model.category.Category;
-import by.itstep.onlineauctionsystem.model.category.CategoryDto;
+import by.itstep.onlineauctionsystem.entity.category.Category;
+import by.itstep.onlineauctionsystem.dto.CategoryDto;
 import by.itstep.onlineauctionsystem.repository.CategoryRepository;
 import org.springframework.stereotype.Service;
 

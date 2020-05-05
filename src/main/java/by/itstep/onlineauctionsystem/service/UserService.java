@@ -1,10 +1,15 @@
 package by.itstep.onlineauctionsystem.service;
 
-import by.itstep.onlineauctionsystem.model.user.User;
-import by.itstep.onlineauctionsystem.model.user.UserDto;
+import by.itstep.onlineauctionsystem.entity.item.AuctionData;
+import by.itstep.onlineauctionsystem.entity.user.User;
+import by.itstep.onlineauctionsystem.dto.UserDto;
 import by.itstep.onlineauctionsystem.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class UserService {

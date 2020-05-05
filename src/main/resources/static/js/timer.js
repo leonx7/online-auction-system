@@ -2,8 +2,7 @@ function initializeTimer(date, id) {
     // Set the date we're counting down to
     var countDownDate = new Date(date).getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function () {
+    var callback = function () {
 
         // Get today's date and time
         var now = new Date().getTime();
@@ -25,5 +24,10 @@ function initializeTimer(date, id) {
             clearInterval(x);
             document.getElementById(id).innerHTML = "EXPIRED";
         }
-    }, 1000);
+    }
+
+    callback();
+
+    // Update the count down every 1 second
+    var x = setInterval(callback, 1000);
 }
