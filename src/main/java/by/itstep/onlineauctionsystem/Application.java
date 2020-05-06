@@ -15,14 +15,14 @@ public class Application {
         SpringApplication.run(Application.class, args);
 
         //create a document instance
-        Document doc = new Document();
+//        Document doc = new Document();
 
         //load the template file
-        doc.loadFromFile("C:\\Users\\Lenovo\\Desktop\\TestInvoice.docx");
+//        doc.loadFromFile("C:\\Users\\Lenovo\\Desktop\\TestInvoice.docx");
 
         //replace text in the document
-        doc.replace("#InvoiceNumber", "17854", false, true);
+//        doc.replace("#InvoiceNumber", "17854", false, true);
 
-        doc.saveToFile("NewInvoice.docx", FileFormat.Docx_2013);
+//        doc.saveToFile("NewInvoice.docx", FileFormat.Docx_2013);
     }
 }

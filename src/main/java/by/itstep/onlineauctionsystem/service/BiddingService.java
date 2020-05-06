@@ -1,6 +1,6 @@
 package by.itstep.onlineauctionsystem.service;
 
-import by.itstep.onlineauctionsystem.entity.bidding.AutoBid;
+import by.itstep.onlineauctionsystem.emailsending.EmailService;
 import by.itstep.onlineauctionsystem.entity.bidding.Bid;
 import by.itstep.onlineauctionsystem.entity.item.AuctionData;
 import by.itstep.onlineauctionsystem.entity.item.Item;
@@ -27,13 +27,15 @@ public class BiddingService {
     private final UserRepository userRepository;
     private final AutoBidRepository autoBidRepository;
     private final ItemRepository itemRepository;
+    private final EmailService emailService;
 
-    public BiddingService(BidRepository bidRepository, AuctionDataRepository auctionDataRepository, UserRepository userRepository, AutoBidRepository autoBidRepository, ItemRepository itemRepository) {
+    public BiddingService(BidRepository bidRepository, AuctionDataRepository auctionDataRepository, UserRepository userRepository, AutoBidRepository autoBidRepository, ItemRepository itemRepository, EmailService emailService) {
         this.bidRepository = bidRepository;
         this.auctionDataRepository = auctionDataRepository;
         this.userRepository = userRepository;
         this.autoBidRepository = autoBidRepository;
         this.itemRepository = itemRepository;
+        this.emailService = emailService;
     }
 
     public Bid saveBid(String username, BidRequest bidRequest) {
@@ -47,12 +49,13 @@ public class BiddingService {
         return bid;
     }
 
-    public BidResponse placeBid(Principal principal, BidRequest bid) throws InterruptedException {
+    public BidResponse placeBid(Principal principal, BidRequest bid) {
         updatePrice(bid);
         saveBid(principal.getName(), bid);
         Double nextBid = Double.valueOf(bid.getBid()) + Double.valueOf(bid.getIncrement());
         String username = principal.getName();
         String currentBid = bid.getBid();
+        emailService.sendBidNotification(principal, bid);
         return new BidResponse(HtmlUtils.htmlEscape(String.valueOf(nextBid)), HtmlUtils.htmlEscape(username), HtmlUtils.htmlEscape(currentBid));
     }
 
