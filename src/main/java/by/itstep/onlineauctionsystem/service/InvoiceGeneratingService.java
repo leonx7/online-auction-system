@@ -1,6 +1,5 @@
 package by.itstep.onlineauctionsystem.service;
 
-
 import com.spire.doc.Document;
 import com.spire.doc.Table;
 import com.spire.doc.fields.Field;

@@ -16,14 +16,24 @@ function initializeTimer(date, id) {
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
         // Display the result in the element with id="demo"
-        document.getElementById(id).innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
-        // If the count down is finished, write some text
-        if (distance < 0) {
+        if (days > 1) {
+            document.getElementById('timerLabel').innerHTML = 'Lot close';
+            document.getElementById(id).innerHTML = date;
+        } else if (distance < 0) {
             clearInterval(x);
-            document.getElementById(id).innerHTML = "EXPIRED";
+            document.getElementById(id).innerHTML = "LOT CLOSED";
+        } else {
+            $('#timer').css("color", "red");
+            document.getElementById(id).innerHTML = hours + " : "
+                + minutes + " : " + seconds;
         }
+
+
     }
 
     callback();

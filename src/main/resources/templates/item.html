@@ -18,11 +18,6 @@
 <span id="bidToken" hidden>!bid</span>
 <span id="username" sec:authentication="name" hidden/>
 <header>
-    <script th:inline="javascript">
-        let endTime = [[${itemDto.endTime}]];
-        let id = 'timer';
-        initializeTimer(endTime, id);
-    </script>
     <script sec:authorize="!isAuthenticated()">
         $(document).ready(function () {
             $("#bidBtn").prop('readonly', true);
@@ -44,32 +39,58 @@
                 <div class="col-sm-6">
                     <input type="hidden" id="id" th:value="${itemDto.id}" name="itemId"/>
                     <input type="hidden" id="increment" th:value="${itemDto.increment}"/>
-                    <h5 class="card-title" th:text="'End date: ' + ${itemDto.formattedEndTime}"></h5>
-                    <h5 id="currentBid" class="card-title" th:text="'Current bid: ' + ${itemDto.price} + ' BYR'"></h5>
-                    <span id="timer" class="card-text"></span>
-                    <div class="col-sm-8" style="margin-top: 1.5em">
-                        <span>
-                            <p class="card-text" id="bidLabel">Bid directly</p>
-                        </span>
-                        <div class="input-group" style="margin-bottom: 1.5em">
-                            <input type="text" id="bid" class="form-control"
-                                   th:placeholder="'BYR ' + (${itemDto.price} + ${itemDto.increment})"
-                                   th:value="(${itemDto.price} + ${itemDto.increment})" onfocus="this.value=''"/>
-                            <div class="input-group-append" id="button-addon4">
-                                <button class="btn btn-outline-secondary" type="submit" id="bidBtn">Place this bid
-                                </button>
-                            </div>
+                    <div class="row">
+                        <div class="col-6" style="text-align: center">
+                            <span class="font-weight-light" id="timerLabel">Lot closes in</span>
+                            <h5 class="font-weight-bold" id="timer"></h5>
+                            <script th:inline="javascript">
+                                let endTime = [[${itemDto.endTime}]];
+                                let id = 'timer';
+                                initializeTimer(endTime, id);
+                            </script>
                         </div>
-                        <span>
-                            <p class="card-text" id="autoBidLabel">Place automatic bid</p>
+                        <div class="col-6" style="text-align: center">
+                            <span class="font-weight-light">Current bid</span>
+                            <h5 class="font-weight-bold" id="currentBid" th:text="'BYR: ' + ${itemDto.price}"></h5>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 2em">
+                        <span style="color: red">
+                        <i class="fas fa-fire" style="display: inline; margin-right: 0.2em"></i>
                         </span>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="BYR" id="autoBid" name="autoBid"/>
-                            <div class="input-group-append" id="button-addon5">
-                                <button class="btn btn-outline-secondary" type="submit" id="autoBidBtn"
-                                        style="width: 120px">Auto
-                                    bid
-                                </button>
+                        <p class="font-weight-bold" th:text="${itemDto.bidCount} + ' bids'"
+                            style="display: inline"></p>
+                        <p class="font-weight-light" th:text="'Next bid ' + (${itemDto.price} + ${itemDto.increment})"></p>
+                    </div>
+                    <hr style="margin-top: 2em">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-10" style="margin-top: 1.5em">
+                        <span>
+                            <p class="font-weight-light" id="bidLabel">Bid directly</p>
+                        </span>
+                            <div class="input-group" style="margin-bottom: 1.5em; width: 350px">
+                                <input type="text" id="bid" class="form-control"
+                                       th:placeholder="'BYR ' + (${itemDto.price} + ${itemDto.increment})"
+                                       th:value="(${itemDto.price} + ${itemDto.increment})" onfocus="this.value=''"/>
+                                <div class="input-group-append" id="button-addon4">
+                                    <button class="btn btn-warning" type="submit" id="bidBtn">
+                                        <i class="fas fa-gavel" style="margin-right: 0.2em"></i>
+                                        Place this bid
+                                    </button>
+                                </div>
+                            </div>
+                            <span>
+                            <p class="font-weight-light" id="autoBidLabel">Place automatic bid</p>
+                        </span>
+                            <div class="input-group" style="margin-bottom: 1.5em; width: 350px">
+                                <input type="text" class="form-control" placeholder="BYR" id="autoBid" name="autoBid"/>
+                                <div class="input-group-append" id="button-addon5">
+                                    <button class="btn btn-warning" type="submit" id="autoBidBtn"
+                                            style="width: 142px">Auto
+                                        bid
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
