@@ -1,0 +1,14 @@
+/* Container holding the image and the text */
+.my-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Bottom centered text */
+.bottom-centered {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
