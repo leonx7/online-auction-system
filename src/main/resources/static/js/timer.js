@@ -27,17 +27,17 @@ function initializeTimer(date, id) {
         } else if (distance < 0) {
             clearInterval(x);
             document.getElementById(id).innerHTML = "LOT CLOSED";
+            $(document).ready(function () {
+                $("#container :input").attr("disabled", true);
+            });
         } else {
             $('#timer').css("color", "red");
             document.getElementById(id).innerHTML = hours + " : "
                 + minutes + " : " + seconds;
         }
-
-
     }
 
     callback();
-
     // Update the count down every 1 second
     var x = setInterval(callback, 1000);
 }
