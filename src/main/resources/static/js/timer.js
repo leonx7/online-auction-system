@@ -22,8 +22,9 @@ function initializeTimer(date, id) {
 
         // Display the result in the element with id="demo"
         if (days > 1) {
-            document.getElementById('timerLabel').innerHTML = 'Lot close';
-            document.getElementById(id).innerHTML = date;
+            // document.getElementById('timerLabel').innerHTML = 'Lot close';
+            document.getElementById(id).innerHTML = days + "d : " + hours + "h";
+            console.log(date);
         } else if (distance < 0) {
             clearInterval(x);
             document.getElementById(id).innerHTML = "LOT CLOSED";

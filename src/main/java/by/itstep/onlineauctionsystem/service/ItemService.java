@@ -4,11 +4,9 @@ import by.itstep.onlineauctionsystem.entity.bidding.Bid;
 import by.itstep.onlineauctionsystem.entity.category.Category;
 import by.itstep.onlineauctionsystem.entity.item.AuctionData;
 import by.itstep.onlineauctionsystem.entity.item.Item;
-import by.itstep.onlineauctionsystem.entity.item.ItemData;
 import by.itstep.onlineauctionsystem.dto.ItemDto;
 import by.itstep.onlineauctionsystem.entity.user.User;
 import by.itstep.onlineauctionsystem.repository.AuctionDataRepository;
-import by.itstep.onlineauctionsystem.repository.ItemDataRepository;
 import by.itstep.onlineauctionsystem.repository.ItemRepository;
 import by.itstep.onlineauctionsystem.repository.UserRepository;
 import org.hibernate.search.jpa.FullTextEntityManager;
@@ -24,7 +22,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 public class ItemService {
@@ -33,15 +30,13 @@ public class ItemService {
     EntityManager entityManager;
 
     final ItemRepository itemRepository;
-    final ItemDataRepository itemDataRepository;
     final ImageStorageService imageStorageService;
     final AuctionDataRepository auctionDataRepository;
     final UserRepository userRepository;
     final BiddingService biddingService;
 
-    public ItemService(ItemRepository itemRepository, ItemDataRepository itemDataRepository, ImageStorageService imageStorageService, AuctionDataRepository auctionDataRepository, UserRepository userRepository, BiddingService biddingService) {
+    public ItemService(ItemRepository itemRepository, ImageStorageService imageStorageService, AuctionDataRepository auctionDataRepository, UserRepository userRepository, BiddingService biddingService) {
         this.itemRepository = itemRepository;
-        this.itemDataRepository = itemDataRepository;
         this.imageStorageService = imageStorageService;
         this.auctionDataRepository = auctionDataRepository;
         this.userRepository = userRepository;
@@ -51,10 +46,8 @@ public class ItemService {
     public Item saveItem(ItemDto itemDto, Principal principal) {
         User user = userRepository.findByEmail(principal.getName());
         Item item = new Item();
-        ItemData itemData = new ItemData();
-        itemData.setItem(item);
-        itemData.setTitle(itemDto.getTitle());
-        itemData.setDescription(itemDto.getDescription());
+        item.setTitle(itemDto.getTitle());
+        item.setDescription(itemDto.getDescription());
         AuctionData auctionData = new AuctionData();
         auctionData.setItem(item);
         auctionData.setStartPrice(Double.valueOf(itemDto.getPrice()));
@@ -62,10 +55,9 @@ public class ItemService {
         auctionData.setIncrement(Double.valueOf(itemDto.getIncrement()));
         auctionData.setEndTime(itemDto.getEndTime());
         item.setCreator(user);
-        item.setItemData(itemData);
         item.setAuctionData(auctionData);
         itemRepository.save(item);
-        imageStorageService.save(itemDto, itemData);
+        imageStorageService.save(itemDto, item);
         return item;
     }
 
@@ -87,7 +79,7 @@ public class ItemService {
     }
 
     public List<ItemDto> getItemsByCategory(Category category) {
-        List<ItemData> results = itemDataRepository.findAllByCategoryId(category);
+        List<Item> results = itemRepository.findAllByCategoryId(category);
         List<ItemDto> itemsDto = new ArrayList<>();
         for (Item item : getItemsByItemData(results)) {
             ItemDto itemDto = createItemDto(item);
@@ -104,15 +96,13 @@ public class ItemService {
     }
 
     public ItemDto createItemDto(Item item) {
-        Optional<ItemData> itemDataOpt = itemDataRepository.findById(item.getId());
-        ItemData itemData = itemDataOpt.get();
         List<String> images = imageStorageService.getPhotos(item.getId());
         List<Bid> bids = biddingService.getBids(item);
         ItemDto itemDto = new ItemDto();
         try {
             itemDto.setId(item.getId());
-            itemDto.setTitle(itemData.getTitle());
-            itemDto.setDescription(itemData.getDescription());
+            itemDto.setTitle(item.getTitle());
+            itemDto.setDescription(item.getDescription());
             itemDto.setIncrement(Double.toString(item.getAuctionData().getIncrement()));
             itemDto.setPrice(Double.toString(item.getAuctionData().getCurrentPrice()));
             itemDto.setEndTime(item.getAuctionData().getEndTime());
@@ -132,7 +122,7 @@ public class ItemService {
         fullTextEntityManager.createIndexer().startAndWait();
         QueryBuilder queryBuilder = fullTextEntityManager.getSearchFactory()
                 .buildQueryBuilder()
-                .forEntity(ItemData.class)
+                .forEntity(Item.class)
                 .get();
         org.apache.lucene.search.Query query = queryBuilder
                 .keyword()
@@ -140,8 +130,8 @@ public class ItemService {
                 .matching(searchQuery)
                 .createQuery();
         org.hibernate.search.jpa.FullTextQuery jpaQuery
-                = fullTextEntityManager.createFullTextQuery(query, ItemData.class);
-        List<ItemData> results = jpaQuery.getResultList();
+                = fullTextEntityManager.createFullTextQuery(query, Item.class);
+        List<Item> results = jpaQuery.getResultList();
         List<ItemDto> itemsDto = new ArrayList<>();
         for (Item item : getItemsByItemData(results)) {
             ItemDto itemDto = createItemDto(item);
@@ -150,9 +140,9 @@ public class ItemService {
         return itemsDto;
     }
 
-    public List<Item> getItemsByItemData(List<ItemData> itemDataList){
+    public List<Item> getItemsByItemData(List<Item> itemDataList){
         List<Long> itemsId = new ArrayList<>();
-        for (ItemData itemData : itemDataList) {
+        for (Item itemData : itemDataList) {
             itemsId.add(itemData.getId());
         }
         List<Item> items = itemRepository.findAllById(itemsId);

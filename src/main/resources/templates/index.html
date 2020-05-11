@@ -147,7 +147,6 @@
                                 <script th:inline="javascript">
                                     var id = [[${flameId}]];
                                     var bidCount = [[${item.bidCount}]];
-                                    console.log(id);
                                     (function () {
                                         if (bidCount > 5) {
                                             $("#" + id).addClass("fas fa-fire");

@@ -22,5 +22,5 @@ public class Image {
     private byte[] data;
     @ManyToOne
     @JoinColumn(name = "item_id")
-    private ItemData itemData;
+    private Item item;
 }

@@ -1,5 +1,6 @@
 package by.itstep.onlineauctionsystem.repository;
 
+import by.itstep.onlineauctionsystem.entity.category.Category;
 import by.itstep.onlineauctionsystem.entity.item.Item;
 import by.itstep.onlineauctionsystem.entity.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,4 +11,6 @@ import java.util.List;
 public interface ItemRepository extends JpaRepository<Item, Long> {
     @Query("SELECT i FROM Item i WHERE i.buyerEmail = ?1")
     List<Item> findItemByBuyer(String buyerEmail);
+
+    List<Item> findAllByCategoryId(Category category);
 }
