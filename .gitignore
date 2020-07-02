@@ -2,4 +2,4 @@
 .idea
 target/
 *.iml
-by.itstep.onlineauctionsystem.entity.item.ItemData/
+by.itstep.onlineauctionsystem.entity.item.Item/

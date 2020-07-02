@@ -1,6 +1,5 @@
 package by.itstep.onlineauctionsystem.websocket;
 
-import by.itstep.onlineauctionsystem.emailsending.EmailService;
 import by.itstep.onlineauctionsystem.service.AutoBiddingService;
 import by.itstep.onlineauctionsystem.service.BiddingService;
 import org.springframework.messaging.handler.annotation.MessageMapping;

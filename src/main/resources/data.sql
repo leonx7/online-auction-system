@@ -1,0 +1,2 @@
+INSERT INTO online_auction_system.user (email, password) VALUES ( 'tom@tut.by','$2a$10$/w0FnOH8P8Bkfd6yMqFI8uWIut.Gn4InVdkLec0SFwfYw2NIA9mlS');
+INSERT INTO online_auction_system.user (email, password) VALUES ( 'bob@tut.by','$2a$10$/w0FnOH8P8Bkfd6yMqFI8uWIut.Gn4InVdkLec0SFwfYw2NIA9mlS');
