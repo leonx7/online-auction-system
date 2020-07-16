@@ -33,7 +33,6 @@ public class UserController {
     @PostMapping("registration")
     public ModelAndView registerUserAccount(@ModelAttribute("userDto") @Valid UserDto userDto, Errors errors, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            System.out.println("**************************************************** : " + bindingResult.getAllErrors());
             return new ModelAndView("registration", "user", userDto);
         }
         try {

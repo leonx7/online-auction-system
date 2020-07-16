@@ -1,25 +1,28 @@
 package by.itstep.onlineauctionsystem.validation;
 
+import org.apache.tomcat.util.buf.Utf8Encoder;
+import sun.nio.cs.UTF_8;
+
 import javax.validation.Constraint;
 import javax.validation.Payload;
-
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
-import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-@Target({TYPE, FIELD, ANNOTATION_TYPE})
+@Target({TYPE, ANNOTATION_TYPE})
 @Retention(RUNTIME)
-@Constraint(validatedBy = EmailValidator.class)
+@Constraint(validatedBy = PasswordMatchesValidator.class)
 @Documented
-public @interface ValidEmail {
-    String message() default "Error! Invalid email!";
+public @interface PasswordMatches {
 
-    Class<?>[] groups() default { };
+    String message() default "Error! The Password and Confirm password fields do not match!";
 
-    Class<? extends Payload>[] payload() default { };
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
 }
+
